@@ -677,24 +677,24 @@
                     <h3>📧 Email Contact</h3>
                     <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">Get in touch with our team</p>
                     
-                    <div id="email-hidden" class="email-reveal">
+                    <div id="emailHidden" class="email-reveal" onclick="showVerification()">
                         <p><strong>Click to reveal email address</strong></p>
                         <p style="font-size: 0.9rem; margin-top: 0.5rem;">⚡ Anti-spam protection active</p>
                     </div>
                     
-                    <div id="verification-box" class="verification-box">
+                    <div id="verificationBox" class="verification-box">
                         <p><strong>Human Verification</strong></p>
                         <p>What is !NAU? (Hint: It's an intentional ___________)</p>
-                        <input type="text" id="verification-answer" class="verification-input" placeholder="Complete the sentence">
-                        <button onclick="verifyAndShowEmail()" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.8rem 1.5rem; font-size: 1rem;">
+                        <input type="text" id="verificationAnswer" class="verification-input" placeholder="Complete the sentence" onkeypress="if(event.key==='Enter') verifyEmail()">
+                        <button onclick="verifyEmail()" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.8rem 1.5rem; font-size: 1rem;">
                             Verify & Show Email
                         </button>
                     </div>
                     
-                    <div id="email-revealed" class="email-revealed" style="display: none;">
+                    <div id="emailRevealed" class="email-revealed" style="display: none;">
                         <p><strong>Email Address:</strong></p>
-                        <div id="email-display" class="email-display"></div>
-                        <button onclick="copyEmailToClipboard()" class="btn btn-secondary" style="margin-top: 0.8rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                        <div id="emailDisplay" class="email-display">info@nauintentionalcommunity.co.za</div>
+                        <button onclick="copyEmail()" class="btn btn-secondary" style="margin-top: 0.8rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
                             📋 Copy Email
                         </button>
                     </div>

@@ -636,27 +636,10 @@
                     <h3>📧 Email Contact</h3>
                     <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">Get in touch with our team</p>
                     
-                    <div class="email-container">
-                        <!-- Step 1: Click to start -->
-                        <div class="email-step active clickable" id="step1" onclick="showStep2()">
-                            <p><strong>Click to reveal email address</strong></p>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">⚡ Anti-spam protection active</p>
-                        </div>
-                        
-                        <!-- Step 2: Answer question -->
-                        <div class="email-step" id="step2">
-                            <p><strong>Quick verification:</strong></p>
-                            <p>What is !NAU? (It's an intentional _______)</p>
-                            <input type="text" class="email-input" id="answer" placeholder="Fill in the blank" onkeypress="if(event.key==='Enter')checkAnswer()">
-                            <button class="btn btn-primary" onclick="checkAnswer()" style="margin-top: 0.5rem;">Verify</button>
-                        </div>
-                        
-                        <!-- Step 3: Show email -->
-                        <div class="email-step" id="step3">
-                            <p><strong>Email Address:</strong></p>
-                            <div class="email-display">info@nauintentionalcommunity.co.za</div>
-                            <button class="btn btn-secondary" onclick="copyToClipboard()" style="margin-top: 0.5rem;">📋 Copy Email</button>
-                        </div>
+                    <div style="background: rgba(40, 167, 69, 0.2); border: 2px solid rgba(40, 167, 69, 0.5); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <p style="font-size: 1.2rem; font-weight: bold; color: #CD853F; margin: 0;">
+                            info at nauintentionalcommunity.co.za
+                        </p>
                     </div>
                 </div>
                 
@@ -686,44 +669,6 @@
     </footer>
 
     <script>
-        function showStep2() {
-            document.getElementById('step1').classList.remove('active');
-            document.getElementById('step2').classList.add('active');
-            document.getElementById('answer').focus();
-        }
-
-        function checkAnswer() {
-            var answer = document.getElementById('answer').value.toLowerCase().trim();
-            if (answer.includes('community') || answer.includes('communities')) {
-                document.getElementById('step2').classList.remove('active');
-                document.getElementById('step3').classList.add('active');
-            } else {
-                alert('Hint: !NAU is an intentional community! Try again.');
-                document.getElementById('answer').value = '';
-                document.getElementById('answer').focus();
-            }
-        }
-
-        function copyToClipboard() {
-            var email = 'info@nauintentionalcommunity.co.za';
-            var textArea = document.createElement('textarea');
-            textArea.value = email;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            var btn = event.target;
-            var originalText = btn.innerHTML;
-            btn.innerHTML = '✅ Copied!';
-            btn.style.background = '#28a745';
-            
-            setTimeout(function() {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-            }, 2000);
-        }
-
         // Smooth scrolling for navigation
         document.addEventListener('DOMContentLoaded', function() {
             var links = document.querySelectorAll('a[href^="#"]');

@@ -345,20 +345,85 @@
             background: #654321;
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+            color: #CD853F;
+        }
+
+        .email-reveal {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+        }
+
+        .email-reveal:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .email-revealed {
+            background: rgba(40, 167, 69, 0.2);
+            border: 2px solid rgba(40, 167, 69, 0.5);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .verification-box {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .verification-input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .email-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #CD853F;
+            word-break: break-all;
+            margin: 0.5rem 0;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
         }
 
         .social-links a {
@@ -368,11 +433,23 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .social-links a:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
         }
 
         @media (max-width: 768px) {
@@ -395,7 +472,11 @@
             }
             
             .footer-content {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-section {
                 text-align: center;
             }
         }
@@ -592,75 +673,48 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div>
-                    <h3>!NAU</h3>
-                    <p>Building the future of sustainable living</p>
+                <div class="contact-section">
+                    <h3>📧 Email Contact</h3>
+                    <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">Get in touch with our team</p>
+                    
+                    <div id="email-hidden" class="email-reveal">
+                        <p><strong>Click to reveal email address</strong></p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">⚡ Anti-spam protection active</p>
+                    </div>
+                    
+                    <div id="verification-box" class="verification-box">
+                        <p><strong>Human Verification</strong></p>
+                        <p>What is !NAU? (Hint: It's an intentional ___________)</p>
+                        <input type="text" id="verification-answer" class="verification-input" placeholder="Complete the sentence">
+                        <button onclick="verifyAndShowEmail()" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.8rem 1.5rem; font-size: 1rem;">
+                            Verify & Show Email
+                        </button>
+                    </div>
+                    
+                    <div id="email-revealed" class="email-revealed" style="display: none;">
+                        <p><strong>Email Address:</strong></p>
+                        <div id="email-display" class="email-display"></div>
+                        <button onclick="copyEmailToClipboard()" class="btn btn-secondary" style="margin-top: 0.8rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                            📋 Copy Email
+                        </button>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <a href="mailto:p.jacops@gmail.com" aria-label="Email">📧</a>
-                    <a href="https://www.linkedin.com/company/nau-intentional-community" aria-label="LinkedIn">💼</a>
-                    <a href="https://www.facebook.com/groups/1057607055784618" aria-label="Facebook">📘</a>
-                    <a href="https://instagram.com/nauitentionalcommunity" aria-label="Instagram">📷</a>
+                
+                <div class="contact-section">
+                    <h3>🌍 Connect With Us</h3>
+                    <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">Follow our journey and join the conversation</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/nau-intentional-community" aria-label="LinkedIn" title="LinkedIn">💼</a>
+                        <a href="https://www.facebook.com/groups/1057607055784618" aria-label="Facebook" title="Facebook">📘</a>
+                        <a href="https://instagram.com/nauitentionalcommunity" aria-label="Instagram" title="Instagram">📷</a>
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>🏠 !NAU Community</h3>
+                    <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">Building the future of sustainable living</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6); font-style: italic;">
+                        "Reimagining sustainable living through regenerative design, closed-loop systems, and collaborative innovation"
+                    </p>
                 </div>
             </div>
-            <hr style="margin: 2rem 0; border: none; height: 1px; background: rgba(255, 255, 255, 0.2);">
-            <p>&copy; 2025 !NAU Concept. All rights reserved. | A revolutionary living concept in development. Collaboration opportunities are not employment offers.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                // Skip if href is just "#" or empty
-                if (!href || href === '#' || href.length <= 1) {
-                    return;
-                }
-                
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header background change on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.3)';
-            } else {
-                header.style.background = 'rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards for animation
-        document.querySelectorAll('.vision-card, .specialist-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
-</body>
-</html>

@@ -4,106 +4,783 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAU Eco-Village - Africa's First Complete Independence Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2d5016;
+            --light-green: #5a7c3e;
+            --accent-gold: #c4a962;
+            --earth-brown: #6b4423;
+            --warm-white: #f9f7f4;
+            --soft-gray: #e8e6e3;
+            --text-dark: #2c2c2c;
+            --text-medium: #4a4a4a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--warm-white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: var(--primary-green);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            color: var(--light-green);
+            margin-top: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.3rem;
+            color: var(--earth-brown);
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-medium);
+        }
+        
+        a {
+            color: var(--light-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero img {
+            max-width: 200px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero h2 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--soft-gray);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat .number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat .label {
+            display: block;
+            font-size: 1rem;
+            color: white;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--primary-green);
+        }
+        
+        .btn-primary:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-green);
+        }
+        
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        section:nth-child(even) {
+            background-color: white;
+        }
+        
+        .vision {
+            background-color: var(--soft-gray);
+        }
+        
+        .crisis-context {
+            background-color: white;
+            padding: 2rem;
+            border-left: 4px solid var(--earth-brown);
+            margin: 2rem 0;
+        }
+        
+        .solution {
+            background-color: var(--light-green);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .solution h3 {
+            color: var(--accent-gold);
+        }
+        
+        .solution p {
+            color: white;
+        }
+        
+        .core-components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .component {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .component:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .tech-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .spec {
+            background-color: var(--warm-white);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--light-green);
+        }
+        
+        .spec h4 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .spec ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .spec li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-medium);
+        }
+        
+        .spec li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--light-green);
+            font-weight: bold;
+        }
+        
+        .ubuntu-practice {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .practice {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .market-stat {
+            text-align: center;
+            background-color: var(--primary-green);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .big-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .market-stat p {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .demographics {
+            background-color: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .demographics h4 {
+            color: var(--primary-green);
+            margin-top: 1.5rem;
+        }
+        
+        .demographics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .demographics li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demographics li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--light-green);
+        }
+        
+        .market-size {
+            background-color: var(--light-green);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        .cost-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .traditional-costs, .nau-costs {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .traditional-costs {
+            border-top: 4px solid var(--earth-brown);
+        }
+        
+        .nau-costs {
+            border-top: 4px solid var(--light-green);
+        }
+        
+        .total {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--soft-gray);
+            color: var(--primary-green);
+        }
+        
+        .savings {
+            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .savings h3 {
+            color: var(--accent-gold);
+        }
+        
+        .savings-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+            margin: 1rem 0;
+        }
+        
+        .savings-annual {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .savings p {
+            color: white;
+        }
+        
+        .ownership-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .option {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .option.featured {
+            border: 3px solid var(--accent-gold);
+            transform: scale(1.02);
+        }
+        
+        .option:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .facility {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--light-green);
+        }
+        
+        .program {
+            background-color: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .details {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        .enterprises-list {
+            margin-top: 1rem;
+        }
+        
+        .enterprise {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .phases {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .phase {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--light-green);
+        }
+        
+        .investment {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .investment h2, .investment h3 {
+            color: white;
+        }
+        
+        .investment p, .investment li {
+            color: white;
+        }
+        
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .metric {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric .label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+        
+        .metric .value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .tier {
+            background-color: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .tier h4 {
+            color: white;
+        }
+        
+        .opportunities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .opportunity {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .opportunity .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .opportunity .btn:hover {
+            background-color: var(--light-green);
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .primary-contact, .general-contact, .location {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--light-green);
+        }
+        
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-mission p, .footer-stats p {
+            color: var(--soft-gray);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            color: var(--soft-gray);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .stat .number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <img src="Logo.jpg" alt="NAU Eco-Village">
-    
-    <h1>NAU ECO-VILLAGE</h1>
-    <h2>Africa's First Complete Independence Community</h2>
-    <p class="tagline">Live Light. Root Deep. Thrive Together.</p>
-    
-    <div class="hero-stats">
-        <div class="stat">
-            <span class="number">50</span>
-            <span class="label">Hectares</span>
+<div class="hero">
+    <div class="container">
+        <img src="Logo.jpg" alt="NAU Eco-Village Logo">
+        <h1>NAU ECO-VILLAGE</h1>
+        <h2>Africa's First Complete Independence Community</h2>
+        <p class="tagline">Live Light. Root Deep. Thrive Together.</p>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="number">50</span>
+                <span class="label">Hectares</span>
+            </div>
+            <div class="stat">
+                <span class="number">32</span>
+                <span class="label">Family Homes</span>
+            </div>
+            <div class="stat">
+                <span class="number">100%</span>
+                <span class="label">Energy & Water Independent</span>
+            </div>
+            <div class="stat">
+                <span class="number">208</span>
+                <span class="label">Skilled Workers Trained Annually</span>
+            </div>
         </div>
-        <div class="stat">
-            <span class="number">32</span>
-            <span class="label">Family Homes</span>
-        </div>
-        <div class="stat">
-            <span class="number">100%</span>
-            <span class="label">Energy & Water Independent</span>
-        </div>
-        <div class="stat">
-            <span class="number">208</span>
-            <span class="label">Skilled Workers Trained Annually</span>
+        
+        <div class="cta-buttons">
+            <a href="#vision" class="btn-primary">Discover the Vision</a>
+            <a href="#investment" class="btn-secondary">Investment Opportunity</a>
         </div>
     </div>
-    
-    <div class="cta-buttons">
-        <a href="#vision" class="btn-primary">Discover the Vision</a>
-        <a href="#investment" class="btn-secondary">Investment Opportunity</a>
-    </div>
-</section>
+</div>
 
-<!-- THE INDEPENDENCE IMPERATIVE -->
 <section id="vision" class="vision">
-    <h2>Why Complete Independence Matters Now</h2>
-    
-    <div class="crisis-context">
-        <p>South Africa faces unprecedented infrastructure failures. Rolling blackouts plague daily life. Water shortages threaten communities. Municipal services decline while costs soar. Middle-class families spend ZAR 2,000 to 8,000 monthly on backup systems while remaining vulnerable to utility failures, inflation, and economic uncertainty.</p>
+    <div class="container">
+        <h2>Why Complete Independence Matters Now</h2>
         
-        <p>Simultaneously, South Africa needs 275,000 green energy workers by 2030, but training institutions lack operational systems for hands-on education. Traditional crafts and cultural practices struggle for economic viability. Communities lack local employment opportunities.</p>
+        <div class="crisis-context">
+            <p>South Africa faces unprecedented infrastructure failures. Rolling blackouts plague daily life. Water shortages threaten communities. Municipal services decline while costs soar. Middle-class families spend ZAR 2,000 to 8,000 monthly on backup systems while remaining vulnerable to utility failures, inflation, and economic uncertainty.</p>
+            
+            <p>Simultaneously, South Africa needs 275,000 green energy workers by 2030, but training institutions lack operational systems for hands-on education. Traditional crafts and cultural practices struggle for economic viability. Communities lack local employment opportunities.</p>
+            
+            <p>Current eco-villages serve only the wealthy. Urban developments offer cramped compromises with continued utility dependence and limited economic diversity.</p>
+        </div>
         
-        <p>Current eco-villages serve only the wealthy. Urban developments offer cramped compromises with continued utility dependence and limited economic diversity.</p>
-    </div>
-    
-    <div class="solution">
-        <h3>NAU's Revolutionary Response</h3>
-        <p>Create a spacious, affordable community achieving complete independence from failing systems while generating revenue through training needed professionals and sustaining diverse local enterprises that preserve cultural heritage and create economic resilience.</p>
+        <div class="solution">
+            <h3>NAU's Revolutionary Response</h3>
+            <p>Create a spacious, affordable community achieving complete independence from failing systems while generating revenue through training needed professionals and sustaining diverse local enterprises that preserve cultural heritage and create economic resilience.</p>
+        </div>
     </div>
 </section>
 
-<!-- WHAT IS NAU -->
-<section class="what-is-nau">
-    <h2>What is NAU Eco-Village?</h2>
-    
-    <div class="project-overview">
+<section>
+    <div class="container">
+        <h2>What is NAU Eco-Village?</h2>
+        
         <p>NAU Eco-Village is a 50-hectare sustainable development in the Melkbos region near Cape Town that combines complete municipal independence, national renewable energy skills development, and thriving local artisan economy. Built on authentic Ubuntu philosophy—"I am because we are"—and universal design principles ensuring accessibility for all abilities, NAU proves that community cooperation creates individual prosperity, national impact, and cultural preservation.</p>
-    </div>
-    
-    <div class="core-components">
-        <div class="component">
-            <h3>32 Middle-Class Family Homes</h3>
-            <p>Affordable homeownership through direct purchase (ZAR 1.2M to 1.8M) or progressive rent-to-own pathways (ZAR 6,500 to 9,500 monthly). Every home includes complete energy and water independence, universal design features, and access to abundant shared facilities.</p>
-        </div>
         
-        <div class="component">
-            <h3>Complete Independence Systems</h3>
-            <p>512kW solar array with 1,447kWh battery storage providing 4.2 days autonomy. Multi-source water strategy harvesting 10.01 million litres annually from rainwater, borehole, and greywater recycling. 50% fresh food independence through integrated agricultural production. Zero waste through closed-loop processing.</p>
-        </div>
-        
-        <div class="component">
-            <h3>Renewable Energy Training Center</h3>
-            <p>Training 208 certified renewable energy professionals annually using live operational community systems. Four-tier vocational program from foundation certificates through community systems specialists, directly addressing South Africa's critical shortage of 275,000 green energy workers by 2030.</p>
-        </div>
-        
-        <div class="component">
-            <h3>Integrated Artisan Enterprise Economy</h3>
-            <p>Forty-plus local employment opportunities in traditional crafts, food production, hospitality, and modern services. Community bakery, artisan butchery, microbrewery, carpentry workshop, metalworking forge, digital services hub, and restaurant creating ZAR 2.75 million annually while preserving South African cultural heritage.</p>
-        </div>
-        
-        <div class="component">
-            <h3>Ubuntu Philosophy Foundation</h3>
-            <p>Authentic African community philosophy—"I am because we are"—guides all governance, conflict resolution, and resource allocation. Ubuntu Council representing all household types and abilities ensures inclusive decision-making, cultural integration, and mutual economic support.</p>
-        </div>
-        
-        <div class="component">
-            <h3>Universal Design Throughout</h3>
-            <p>Every home, facility, and system designed for participation by all abilities. Zero-step entries, wide doorways, accessible bathrooms, adaptive technologies, and inclusive employment opportunities ensure complete accessibility across the entire 50-hectare development.</p>
+        <div class="core-components">
+            <div class="component">
+                <h3>32 Middle-Class Family Homes</h3>
+                <p>Affordable homeownership through direct purchase (ZAR 1.2M to 1.8M) or progressive rent-to-own pathways (ZAR 6,500 to 9,500 monthly). Every home includes complete energy and water independence, universal design features, and access to abundant shared facilities.</p>
+            </div>
+            
+            <div class="component">
+                <h3>Complete Independence Systems</h3>
+                <p>512kW solar array with 1,447kWh battery storage providing 4.2 days autonomy. Multi-source water strategy harvesting 10.01 million litres annually from rainwater, borehole, and greywater recycling. 50% fresh food independence through integrated agricultural production. Zero waste through closed-loop processing.</p>
+            </div>
+            
+            <div class="component">
+                <h3>Renewable Energy Training Center</h3>
+                <p>Training 208 certified renewable energy professionals annually using live operational community systems. Four-tier vocational program from foundation certificates through community systems specialists, directly addressing South Africa's critical shortage of 275,000 green energy workers by 2030.</p>
+            </div>
+            
+            <div class="component">
+                <h3>Integrated Artisan Enterprise Economy</h3>
+                <p>Forty-plus local employment opportunities in traditional crafts, food production, hospitality, and modern services. Community bakery, artisan butchery, microbrewery, carpentry workshop, metalworking forge, digital services hub, and restaurant creating ZAR 2.75 million annually while preserving South African cultural heritage.</p>
+            </div>
+            
+            <div class="component">
+                <h3>Ubuntu Philosophy Foundation</h3>
+                <p>Authentic African community philosophy—"I am because we are"—guides all governance, conflict resolution, and resource allocation. Ubuntu Council representing all household types and abilities ensures inclusive decision-making, cultural integration, and mutual economic support.</p>
+            </div>
+            
+            <div class="component">
+                <h3>Universal Design Throughout</h3>
+                <p>Every home, facility, and system designed for participation by all abilities. Zero-step entries, wide doorways, accessible bathrooms, adaptive technologies, and inclusive employment opportunities ensure complete accessibility across the entire 50-hectare development.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- BREAKTHROUGH TECHNOLOGY -->
 <section class="technology">
-    <h2>Revolutionary Dual-Purpose Technology</h2>
-    
-    <div class="tech-innovation">
+    <div class="container">
+        <h2>Revolutionary Dual-Purpose Technology</h2>
+        
         <h3>The World's First Agrivoltaic-Aqua System</h3>
         <p>Traditional developments build separate expensive systems for energy and water. NAU revolutionizes this approach with dual-purpose solar panels featuring integrated collection channels that harvest both sunshine and rainfall from the same infrastructure.</p>
         
@@ -155,11 +832,10 @@
     </div>
 </section>
 
-<!-- UBUNTU FOUNDATION -->
 <section class="ubuntu">
-    <h2>Ubuntu: "I Am Because We Are"</h2>
-    
-    <div class="ubuntu-philosophy">
+    <div class="container">
+        <h2>Ubuntu: "I Am Because We Are"</h2>
+        
         <p>Ubuntu philosophy forms NAU's foundation, recognizing that true independence comes through authentic community relationships, cultural preservation, and mutual economic support. Every system, space, and enterprise demonstrates that working together creates affordability while building stronger relationships and preserving cultural heritage accessible to all abilities.</p>
         
         <div class="ubuntu-practice">
@@ -186,20 +862,17 @@
     </div>
 </section>
 
-<!-- TARGET MARKET -->
 <section class="target-market">
-    <h2>Who is NAU For?</h2>
-    
-    <div class="market-overview">
+    <div class="container">
+        <h2>Who is NAU For?</h2>
+        
         <p>NAU targets South Africa's crisis-aware middle class who recognize that traditional municipal services are failing but cannot afford luxury off-grid solutions. Our revolutionary dual-purpose technology makes complete independence accessible at middle-class price points.</p>
         
         <div class="market-stat">
             <span class="big-number">305,000</span>
             <p>Cape Town households actively seeking independence solutions but priced out of current alternatives until now</p>
         </div>
-    </div>
-    
-    <div class="primary-market">
+        
         <h3>Primary Target: Independence Seekers</h3>
         
         <div class="demographics">
@@ -231,440 +904,56 @@
         </div>
         
         <div class="market-size">
-            <p>125,000 households in Cape Town metropolitan area</p>
-        </div>
-    </div>
-    
-    <div class="secondary-market">
-        <h3>Secondary Target: Progressive Ownership Pathway</h3>
-        
-        <div class="demographics">
-            <h4>Emerging Professionals</h4>
-            <ul>
-                <li>Tech workers, digital marketers, IT specialists</li>
-                <li>Creative professionals, content creators</li>
-                <li>Healthcare support staff, clinic coordinators</li>
-                <li>Financial services workers, accounting assistants</li>
-                <li>Government entry-level civil servants</li>
-            </ul>
-            
-            <h4>Financial Status</h4>
-            <ul>
-                <li>Current income: ZAR 20,000 to 40,000 monthly</li>
-                <li>Rental market: ZAR 8,000 to 15,000 monthly seeking homeownership</li>
-                <li>Career stage: Early to mid-career with growth trajectory</li>
-                <li>Want independence access before achieving full ownership</li>
-            </ul>
-            
-            <h4>Pathway Appeal</h4>
-            <ul>
-                <li>Monthly investment: ZAR 6,500 to 9,500 building equity</li>
-                <li>Complete independence from Day 1</li>
-                <li>15-year clear ownership timeline</li>
-                <li>Ubuntu philosophy appealing to collaborative wealth building</li>
-                <li>Enterprise employment opportunities</li>
-            </ul>
-        </div>
-        
-        <div class="market-size">
-            <p>180,000 households in Cape Town metropolitan area</p>
+            125,000 households in Cape Town metropolitan area
         </div>
     </div>
 </section>
 
-<!-- HOUSEHOLD ECONOMICS -->
 <section class="economics">
-    <h2>Your Household Economics at NAU</h2>
-    
-    <div class="cost-comparison">
-        <div class="traditional-costs">
-            <h3>Traditional Urban Living Costs</h3>
-            <ul>
-                <li>Electricity bills: ZAR 2,000 monthly</li>
-                <li>Water and sewer: ZAR 500 monthly</li>
-                <li>Waste collection: ZAR 200 monthly</li>
-                <li>Fresh food costs: ZAR 3,000 monthly</li>
-                <li>Home maintenance: ZAR 300 monthly</li>
-                <li>Backup power investment: ZAR 2,000 to 8,000 monthly</li>
-            </ul>
-            <p class="total">Total Monthly Cost: ZAR 8,000 to 14,000</p>
-        </div>
+    <div class="container">
+        <h2>Your Household Economics at NAU</h2>
         
-        <div class="nau-costs">
-            <h3>NAU Eco-Village Living Costs</h3>
-            <ul>
-                <li>Electricity bills: ZAR 0 (100% eliminated)</li>
-                <li>Water and sewer: ZAR 0 (100% eliminated)</li>
-                <li>Waste collection: ZAR 0 (100% eliminated)</li>
-                <li>Fresh food costs: ZAR 1,500 (50% reduction)</li>
-                <li>Home maintenance: ZAR 0 (community managed)</li>
-                <li>Community levy: ZAR 2,850 monthly</li>
-            </ul>
-            <p class="total">Total Monthly Cost: ZAR 4,350</p>
-        </div>
-    </div>
-    
-    <div class="savings">
-        <h3>Your Monthly Savings at NAU</h3>
-        <p class="savings-amount">ZAR 3,650 to 9,650 per month</p>
-        <p class="savings-annual">ZAR 43,800 to 115,800 annually</p>
-        <p>These savings immediately offset any higher purchase price compared to traditional housing while providing complete protection from utility cost inflation and infrastructure failures.</p>
-    </div>
-    
-    <div class="community-levy">
-        <h3>Community Levy Breakdown: ZAR 2,850 Monthly</h3>
-        <ul>
-            <li>Energy system operations: ZAR 750</li>
-            <li>Water system management: ZAR 550</li>
-            <li>Food production support: ZAR 350</li>
-            <li>Community facility access: ZAR 450</li>
-            <li>24/7 professional security: ZAR 350</li>
-            <li>Site maintenance and accessibility: ZAR 400</li>
-        </ul>
-    </div>
-</section>
-
-<!-- OWNERSHIP OPTIONS -->
-<section class="ownership">
-    <h2>Your Path to Independence</h2>
-    
-    <div class="ownership-options">
-        <div class="option">
-            <h3>Direct Purchase</h3>
-            <div class="pricing">
+        <div class="cost-comparison">
+            <div class="traditional-costs">
+                <h3>Traditional Urban Living Costs</h3>
                 <ul>
-                    <li>Compact homes (60m²): ZAR 1.2M to 1.4M</li>
-                    <li>Standard homes (80m²): ZAR 1.4M to 1.6M</li>
-                    <li>Extended homes (100m²): ZAR 1.6M to 1.8M</li>
+                    <li>Electricity bills: ZAR 2,000 monthly</li>
+                    <li>Water and sewer: ZAR 500 monthly</li>
+                    <li>Waste collection: ZAR 200 monthly</li>
+                    <li>Fresh food costs: ZAR 3,000 monthly</li>
+                    <li>Home maintenance: ZAR 300 monthly</li>
+                    <li>Backup power investment: ZAR 2,000 to 8,000 monthly</li>
                 </ul>
+                <p class="total">Total Monthly Cost: ZAR 8,000 to 14,000</p>
             </div>
-            <div class="benefits">
-                <h4>Immediate Benefits</h4>
+            
+            <div class="nau-costs">
+                <h3>NAU Eco-Village Living Costs</h3>
                 <ul>
-                    <li>Full property ownership from Day 1</li>
-                    <li>Complete energy and water independence</li>
-                    <li>Access to all community facilities and enterprises</li>
+                    <li>Electricity bills: ZAR 0 (100% eliminated)</li>
+                    <li>Water and sewer: ZAR 0 (100% eliminated)</li>
+                    <li>Waste collection: ZAR 0 (100% eliminated)</li>
+                    <li>Fresh food costs: ZAR 1,500 (50% reduction)</li>
+                    <li>Home maintenance: ZAR 0 (community managed)</li>
                     <li>Community levy: ZAR 2,850 monthly</li>
-                    <li>Net monthly savings: ZAR 3,650 to 9,650</li>
                 </ul>
+                <p class="total">Total Monthly Cost: ZAR 4,350</p>
             </div>
         </div>
         
-        <div class="option featured">
-            <h3>Progressive Rent-to-Own</h3>
-            <div class="pricing">
-                <ul>
-                    <li>Monthly investment: ZAR 6,500 to 9,500</li>
-                    <li>Community levy included</li>
-                    <li>15-year ownership timeline</li>
-                    <li>5 to 10% initial deposit</li>
-                </ul>
-            </div>
-            <div class="benefits">
-                <h4>Progressive Benefits</h4>
-                <ul>
-                    <li>Immediate access to complete independence from Day 1</li>
-                    <li>Monthly payments building clear ownership equity</li>
-                    <li>Full community participation and voting rights</li>
-                    <li>Enterprise employment opportunities</li>
-                    <li>Transparent equity tracking monthly</li>
-                    <li>Competitive with urban rent plus utilities</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="home-features">
-        <h3>Every Home Includes</h3>
-        <ul>
-            <li>Universal design features: zero-step entries, wide doorways, accessible bathrooms</li>
-            <li>Complete energy independence through community solar system</li>
-            <li>Complete water independence through multi-source strategy</li>
-            <li>Private garden space (0.4 to 0.5 hectares)</li>
-            <li>High-speed internet connectivity</li>
-            <li>Access to abundant shared facilities across 50 hectares</li>
-        </ul>
-    </div>
-</section>
-
-<!-- SHARED FACILITIES -->
-<section class="facilities">
-    <h2>Abundant Shared Facilities</h2>
-    
-    <p class="facilities-intro">Smaller private homes serving as family sanctuaries combined with extensive shared facilities accessible to all abilities. This approach addresses both affordability and authentic community building.</p>
-    
-    <div class="facility-grid">
-        <div class="facility">
-            <h3>Professional Co-Working Spaces</h3>
-            <p>Guaranteed renewable power workspace supporting remote work and entrepreneurship. High-speed internet, meeting rooms, and collaborative areas designed for accessibility.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Wellness Center</h3>
-            <p>Health and fitness facilities with accessible equipment powered entirely by renewable energy. Yoga studio, fitness equipment, therapeutic spaces.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Community Kitchen</h3>
-            <p>Shared cooking and food processing spaces for daily meals, preservation activities, and cultural culinary sharing. Commercial-grade equipment for community events.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Learning Centers</h3>
-            <p>Educational facilities for independence skills development, renewable energy training, cultural programs, and intergenerational knowledge sharing.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Ubuntu Cultural Center</h3>
-            <p>Multi-purpose spaces for community celebrations, multicultural events, traditional ceremonies, and cultural education programs accessible to all.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Workshop Facilities</h3>
-            <p>Carpentry, metalworking, pottery, textile production, and digital fabrication workshops with adaptive tools enabling participation by all abilities.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Community Restaurant</h3>
-            <p>Daily meals featuring community-produced ingredients and authentic multicultural cuisine. Event hosting, catering services, and culinary training opportunities.</p>
-        </div>
-        
-        <div class="facility">
-            <h3>Agricultural Spaces</h3>
-            <p>2,000m² climate-controlled greenhouse plus 5,000m² outdoor cultivation with accessible growing beds enabling all residents to participate in food production.</p>
+        <div class="savings">
+            <h3>Your Monthly Savings at NAU</h3>
+            <span class="savings-amount">ZAR 3,650 to 9,650 per month</span>
+            <span class="savings-annual">ZAR 43,800 to 115,800 annually</span>
+            <p>These savings immediately offset any higher purchase price compared to traditional housing while providing complete protection from utility cost inflation and infrastructure failures.</p>
         </div>
     </div>
 </section>
 
-<!-- VOCATIONAL TRAINING -->
-<section class="training">
-    <h2>Renewable Energy Vocational Training Excellence</h2>
-    
-    <div class="training-overview">
-        <p>South Africa needs 275,000 green energy workers by 2030, with 140,000 specifically in solar energy. NAU addresses this critical shortage by training 208 certified renewable energy professionals annually using live operational community systems.</p>
-    </div>
-    
-    <div class="training-programs">
-        <div class="program">
-            <h3>Foundation Renewable Energy Certificate</h3>
-            <div class="details">
-                <p>Duration: 4 months</p>
-                <p>Enrollment: 96 students annually</p>
-                <p>Course fee: ZAR 12,000</p>
-            </div>
-            <div class="curriculum">
-                <p>Solar installation, battery safety, water systems, community energy monitoring. Daily hands-on work on NAU's operational 512kW solar system. Enterprise integration providing work experience.</p>
-            </div>
-        </div>
-        
-        <div class="program">
-            <h3>Advanced Renewable Energy Technician</h3>
-            <div class="details">
-                <p>Duration: 6 months</p>
-                <p>Enrollment: 48 students annually</p>
-                <p>Course fee: ZAR 28,000</p>
-            </div>
-            <div class="curriculum">
-                <p>Advanced system design, battery programming, smart grid integration, project management. Leading installation projects, optimizing community systems, training junior students.</p>
-            </div>
-        </div>
-        
-        <div class="program">
-            <h3>Community Energy Systems Specialist</h3>
-            <div class="details">
-                <p>Duration: 9 months</p>
-                <p>Enrollment: 24 students annually</p>
-                <p>Course fee: ZAR 45,000</p>
-            </div>
-            <div class="curriculum">
-                <p>Community-scale system design, financial modeling, regulatory compliance, Ubuntu governance. Designing expansion systems, developing business cases, leading stakeholder engagement.</p>
-            </div>
-        </div>
-        
-        <div class="program">
-            <h3>Ubuntu Community Development Practitioner</h3>
-            <div class="details">
-                <p>Duration: 6 months</p>
-                <p>Enrollment: 40 students annually</p>
-                <p>Course fee: ZAR 18,000</p>
-            </div>
-            <div class="curriculum">
-                <p>Ubuntu philosophy, participatory development, multicultural integration, accessibility advocacy. Full participation in community governance, facilitating cultural celebrations, managing enterprises.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="training-advantage">
-        <h3>NAU's Unique Training Advantage</h3>
-        <ul>
-            <li>Live operational systems: 512kW solar array and 1,447kWh battery storage</li>
-            <li>Community-scale integration: learning on real systems serving actual community needs</li>
-            <li>Comprehensive technology exposure: energy, water, food, and enterprise systems integrated</li>
-            <li>Ubuntu community development: technical training combined with authentic African community building</li>
-            <li>Enterprise integration: training programs connected to real employment opportunities</li>
-        </ul>
-    </div>
-</section>
-
-<!-- ARTISAN ECONOMY -->
-<section class="enterprises">
-    <h2>Integrated Artisan Enterprise Economy</h2>
-    
-    <div class="economy-overview">
-        <p>Forty-plus local employment opportunities creating economic resilience while preserving South African cultural heritage. Each enterprise operates using renewable energy and integrates Ubuntu principles ensuring accessible participation by residents of all abilities.</p>
-    </div>
-    
-    <div class="enterprise-categories">
-        <div class="category">
-            <h3>Traditional Craft Workshops</h3>
-            <div class="enterprises-list">
-                <div class="enterprise">
-                    <h4>Carpentry and Woodworking</h4>
-                    <p>Custom furniture, solar mounting structures, cultural artifacts. Traditional woodworking from all represented cultures enhanced with modern tools.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Metalworking and Blacksmith Forge</h4>
-                    <p>Solar mounting hardware, traditional tools, artistic metalwork. Ubuntu blacksmithing techniques enhanced with renewable energy-powered tools.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Leather and Textile Artisan Workshop</h4>
-                    <p>Cultural clothing, accessories, home goods, repair services. Traditional leatherworking and textile production preserving Ubuntu craft methods.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Pottery and Ceramics Studio</h4>
-                    <p>Functional pottery, artistic ceramics, therapeutic programs. Indigenous pottery methods enhanced with biogas and solar-powered kilns.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="category">
-            <h3>Food Production and Hospitality</h3>
-            <div class="enterprises-list">
-                <div class="enterprise">
-                    <h4>Community Bakery</h4>
-                    <p>Daily bread using community-grown grains, traditional South African baked goods from all represented cultures. Catering for events and programs.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Artisan Butchery</h4>
-                    <p>Processing community-raised livestock, traditional preserved meats including biltong and boerewors. Halal and kosher processing available.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Microbrewery and Fermentation</h4>
-                    <p>African traditional beer (umqombothi) alongside modern craft brewing. Kombucha and fermented foods supporting community nutrition.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Community Restaurant and Tea Room</h4>
-                    <p>Daily meals featuring community-produced ingredients and authentic multicultural cuisine. Event hosting, catering services, educational dining experiences.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="category">
-            <h3>Modern Production and Services</h3>
-            <div class="enterprises-list">
-                <div class="enterprise">
-                    <h4>Renewable Energy Equipment Workshop</h4>
-                    <p>Solar mounting systems, equipment fabrication, system repairs. Direct connection with training programs providing work experience.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Digital Services and Technology Hub</h4>
-                    <p>Website development, digital marketing, technology support. Online sales platforms for all community enterprises.</p>
-                </div>
-                
-                <div class="enterprise">
-                    <h4>Community Marketplace</h4>
-                    <p>Showcase and sales space for all community-produced goods. Educational tourism visitor center. E-commerce platform expanding market reach.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="enterprise-benefits">
-        <h3>Enterprise Employment Opportunities</h3>
-        <ul>
-            <li>Forty-plus permanent positions across all enterprises</li>
-            <li>Training and apprenticeship programs for residents</li>
-            <li>Part-time and project-based work options</li>
-            <li>Cooperative profit-sharing models</li>
-            <li>Skills development and entrepreneurship support</li>
-            <li>Accessible participation enabling work by all abilities</li>
-        </ul>
-    </div>
-</section>
-
-<!-- PROJECT TIMELINE -->
-<section class="timeline">
-    <h2>Development Timeline</h2>
-    
-    <div class="timeline-overview">
-        <p>36-month development timeline from land acquisition through full operations launch. Strategic phasing ensures early resident occupancy while revenue generation supports ongoing development.</p>
-    </div>
-    
-    <div class="phases">
-        <div class="phase">
-            <h3>Months 1 to 12: Foundation Phase</h3>
-            <ul>
-                <li>Land acquisition and site preparation</li>
-                <li>Infrastructure planning and permit acquisition</li>
-                <li>Utility installation and road construction</li>
-                <li>Core team establishment</li>
-            </ul>
-            <p class="investment">Investment: ZAR 19.8M</p>
-        </div>
-        
-        <div class="phase">
-            <h3>Months 13 to 24: Construction Phase</h3>
-            <ul>
-                <li>Residential construction commencement</li>
-                <li>Independence systems installation</li>
-                <li>Community facilities construction</li>
-                <li>Training infrastructure development</li>
-            </ul>
-            <p class="investment">Investment: ZAR 30M</p>
-        </div>
-        
-        <div class="phase">
-            <h3>Months 25 to 36: Operations Launch</h3>
-            <ul>
-                <li>Training programs launch with first revenue generation</li>
-                <li>Student enrollment scaling</li>
-                <li>Artisan workshops opening</li>
-                <li>Community integration programs</li>
-                <li>Enterprise operations commencement</li>
-            </ul>
-            <p class="investment">Investment: ZAR 12.58M</p>
-            <p class="revenue">Revenue Generated: ZAR 8.1M</p>
-        </div>
-    </div>
-    
-    <div class="key-milestones">
-        <h3>Key Milestones</h3>
-        <ul>
-            <li>Month 1: Land acquisition and development team establishment</li>
-            <li>Month 6: Energy systems installation begins</li>
-            <li>Month 12: Construction permits approved and utilities operational</li>
-            <li>Month 18: First homes completed</li>
-            <li>Month 24: Energy systems fully operational</li>
-            <li>Month 25: Training programs launch</li>
-            <li>Month 30: 50% training capacity plus artisan enterprises operational</li>
-            <li>Month 36: Full base operations achievement</li>
-            <li>Month 42: Break-even achievement and market validation</li>
-        </ul>
-    </div>
-</section>
-
-<!-- INVESTMENT OPPORTUNITY -->
 <section id="investment" class="investment">
-    <h2>Investment Opportunity</h2>
-    
-    <div class="investment-summary">
+    <div class="container">
+        <h2>Investment Opportunity</h2>
+        
         <div class="key-metrics">
             <div class="metric">
                 <span class="label">Total Capital Requirement</span>
@@ -672,20 +961,18 @@
             </div>
             <div class="metric">
                 <span class="label">Development Timeline</span>
-                <span class="value">36 Months to Full Operations</span>
+                <span class="value">36 Months</span>
             </div>
             <div class="metric">
                 <span class="label">Employment Creation</span>
-                <span class="value">65+ Permanent Positions</span>
+                <span class="value">65+ Positions</span>
             </div>
             <div class="metric">
                 <span class="label">Annual Revenue Target</span>
-                <span class="value">ZAR 12.5M+ Enhanced Operations</span>
+                <span class="value">ZAR 12.5M+</span>
             </div>
         </div>
-    </div>
-    
-    <div class="investment-highlights">
+        
         <h3>Investment Highlights</h3>
         <ul>
             <li>Strategic cost optimization: ZAR 10.97M savings through local fabrication and student labor integration</li>
@@ -695,9 +982,7 @@
             <li>Social impact integration: skills development, cultural preservation, economic resilience</li>
             <li>Environmental leadership: complete independence demonstration with regenerative practices</li>
         </ul>
-    </div>
-    
-    <div class="investment-structure">
+        
         <h3>Capital Raise Structure</h3>
         
         <div class="tier">
@@ -719,9 +1004,7 @@
             <h4>Technology Innovation Investors: ZAR 4.3M (7%)</h4>
             <p>Cleantech venture capital, strategic equipment partnerships, and international innovation funds with technology licensing upside potential.</p>
         </div>
-    </div>
-    
-    <div class="investment-cta">
+        
         <h3>Investor Inquiries</h3>
         <p>We are currently seeking strategic investment partners who share our vision for accessible independence, community empowerment, and sustainable development.</p>
         <p><strong>Project Developer:</strong> Peter Jacops</p>
@@ -730,73 +1013,42 @@
     </div>
 </section>
 
-<!-- JOIN THE MOVEMENT -->
-<section class="collaborate">
-    <h2>Join the NAU Movement</h2>
-    
-    <div class="opportunities">
-        <div class="opportunity">
-            <h3>Future Residents</h3>
-            <p>Register your interest in becoming a founding member of Africa's first complete independence community. Limited to 32 households.</p>
-            <a href="#contact" class="btn">Register Interest</a>
-        </div>
-        
-        <div class="opportunity">
-            <h3>Investment Partners</h3>
-            <p>Strategic investors seeking market-competitive returns combined with measurable social and environmental impact.</p>
-            <a href="#contact" class="btn">Investment Inquiry</a>
-        </div>
-        
-        <div class="opportunity">
-            <h3>Professional Collaborators</h3>
-            <p>Architects, engineers, renewable energy specialists, community development professionals, and artisans bringing expertise to revolutionary sustainable living.</p>
-            <a href="#contact" class="btn">Collaboration Inquiry</a>
-        </div>
-        
-        <div class="opportunity">
-            <h3>Training Students</h3>
-            <p>Aspiring renewable energy professionals seeking hands-on training using operational community systems with SETA-accredited certification.</p>
-            <a href="#contact" class="btn">Training Program Inquiry</a>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
 <section id="contact" class="contact">
-    <h2>Contact NAU Eco-Village</h2>
-    
-    <div class="contact-info">
-        <div class="primary-contact">
-            <h3>Project Developer</h3>
-            <p><strong>Peter Jacops</strong></p>
-            <p>Mobile: 071 276 5502</p>
-            <p>Email: p.jacops@gmail.com</p>
+    <div class="container">
+        <h2>Contact NAU Eco-Village</h2>
+        
+        <div class="contact-info">
+            <div class="primary-contact">
+                <h3>Project Developer</h3>
+                <p><strong>Peter Jacops</strong></p>
+                <p>Mobile: 071 276 5502</p>
+                <p>Email: p.jacops@gmail.com</p>
+            </div>
+            
+            <div class="general-contact">
+                <h3>General Inquiries</h3>
+                <p>Email: info@nauintentionalcommunity.co.za</p>
+            </div>
+            
+            <div class="location">
+                <h3>Project Location</h3>
+                <p>Melkbos Region</p>
+                <p>Near Cape Town, South Africa</p>
+                <p>50 Hectares</p>
+            </div>
         </div>
         
-        <div class="general-contact">
-            <h3>General Inquiries</h3>
-            <p>Email: info@nauintentionalcommunity.co.za</p>
-        </div>
-        
-        <div class="location">
-            <h3>Project Location</h3>
-            <p>Melkbos Region</p>
-            <p>Near Cape Town, South Africa</p>
-            <p>50 Hectares</p>
-        </div>
-    </div>
-    
-    <div class="social-media">
-        <h3>Connect With Us</h3>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/company/nau-intentional-community" target="_blank">LinkedIn</a>
-            <a href="https://www.facebook.com/groups/1057607055784618" target="_blank">Facebook</a>
-            <a href="https://instagram.com/naunitentionalcommunity" target="_blank">Instagram</a>
+        <div class="social-media">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/nau-intentional-community" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com/groups/1057607055784618" target="_blank">Facebook</a>
+                <a href="https://instagram.com/naunitentionalcommunity" target="_blank">Instagram</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-content">
         <div class="footer-logo">

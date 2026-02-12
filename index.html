@@ -242,6 +242,38 @@
             line-height: 1.8;
         }
 
+        .video-section {
+            background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .video-section p {
+            color: rgba(255,255,255,0.85);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.15rem;
+        }
+
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+            border: 3px solid var(--accent-color);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -331,7 +363,7 @@
         }
 
         .tech-specs li:before {
-            content: "✓ ";
+            content: "\2713  ";
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 0.5rem;
@@ -571,6 +603,10 @@
             .newsletter-form input {
                 min-width: 100%;
             }
+
+            .video-wrapper {
+                margin: 0 10px;
+            }
         }
 
         html {
@@ -593,7 +629,7 @@
                 <li><a href="#innovation">Innovation</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#participate">Participate</a></li>
-                <li><a href="/cdn-cgi/l/email-protection#9af3f4fcf5daf4fbeff3f4eefff4eef3f5f4fbf6f9f5f7f7eff4f3eee3b4f9f5b4e0fb">Contact Us</a></li>
+                <li><a href="mailto:info@nauintentionalcommunity.co.za">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -603,7 +639,7 @@
             <div class="hero-content">
                 <h1>Complete Independence Community</h1>
                 <p class="hero-subtitle">Where middle-class families achieve total freedom from failing municipal systems through Ubuntu cooperation</p>
-                <div class="status-badge">Comprehensive Planning Complete | Founding Community Formation Launching January 2026</div>
+                <div class="status-badge">Comprehensive Planning Complete | Founding Community Formation Launching 2026</div>
                 <p class="hero-description">
                     We are developing !NAU - a residential community in the Cape Town region where 32 households will live entirely independent of electricity grid, water supply, and waste services. Through revolutionary dual-purpose technology and cooperative economics, we're making complete independence accessible at middle-class prices.
                 </p>
@@ -615,6 +651,19 @@
                     <a href="#partners" class="btn btn-secondary">Explore Partnerships</a>
                     <a href="#documentation" class="btn btn-secondary">Request Documentation</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2>Discover !NAU</h2>
+            <p>Watch our introduction to understand how complete independence through Ubuntu cooperation is becoming reality for middle-class South African families.</p>
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="">
+                    <source src="small !NAU intor.mp4" type="video/mp4">
+                    Your browser does not support video playback. Please update your browser to view this content.
+                </video>
             </div>
         </div>
     </section>
@@ -656,37 +705,37 @@
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon">&#9889;</div>
                     <h3>Complete Systems Independence</h3>
                     <p>Not solar panels as amenity but total freedom. 100 percent energy independence. 100 percent water independence through multiple sources. Zero waste dependency. 50 percent fresh food production.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
+                    <div class="feature-icon">&#129309;</div>
                     <h3>Ubuntu Cooperation</h3>
                     <p>African philosophy at our foundation. "I am because we are." Every decision considers both individual households and collective wellbeing. Authentic multicultural integration. Consensus-based governance.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">♿</div>
+                    <div class="feature-icon">&#9855;</div>
                     <h3>Universal Accessibility</h3>
                     <p>Every system, residence, and facility designed for participation by all abilities. Universal design integrated from inception, not retrofitted. No one excluded from independence benefits.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🛠️</div>
+                    <div class="feature-icon">&#128736;</div>
                     <h3>Integrated Artisan Economy</h3>
                     <p>Forty-plus permanent employment opportunities through traditional craft workshops and food production enterprises. Preserving South African cultural heritage while creating economic resilience.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon">&#128176;</div>
                     <h3>Middle-Class Affordability</h3>
                     <p>Homes ZAR 1.2-1.8 million versus ZAR 3-5 million for typical off-grid properties. Progressive ownership pathways for rental market families. Complete independence accessible to healthcare workers, teachers, government employees.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
+                    <div class="feature-icon">&#127757;</div>
                     <h3>Cultural Preservation</h3>
                     <p>Traditional South African crafts and practices preserved through integrated artisan workshops. Multicultural celebration rather than cultural separation. Ubuntu values guiding modern community life.</p>
                 </div>
@@ -803,32 +852,32 @@
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <h4>✓ Comprehensive Planning Complete</h4>
+                    <h4>&#10003; Comprehensive Planning Complete</h4>
                     <p>Master plan detailing spatial design, independence systems specifications, community facilities, artisan enterprise integration, universal accessibility features, and Ubuntu governance structures. Financial framework showing investment requirements, revenue projections, operating costs, and break-even pathways. Community constitution establishing philosophical foundation and governance. All documentation available upon request.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>⏳ Regulatory Consultation Beginning</h4>
+                    <h4>&#8987; Regulatory Consultation Beginning</h4>
                     <p>Engaging City of Cape Town planning department for development feasibility verification. Consulting National Nuclear Regulator regarding proximity to Koeberg Nuclear Power Station depending on site selection. Preparing environmental impact assessment. Building relationships with regulatory authorities before formal applications ensures smooth approval processes.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>⏳ Property Identification in Progress</h4>
+                    <h4>&#8987; Property Identification in Progress</h4>
                     <p>Evaluating sites in the Cape Town region based on regulatory feasibility, accessibility for middle-class target market, land cost enabling affordable home pricing, adequate space for residential and artisan integration, and community preference through founding member input. Property acquisition will occur once founding community reaches 20-household commitment threshold.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>🎯 Founding Community Formation: Our Immediate Priority</h4>
+                    <h4>&#127919; Founding Community Formation: Our Immediate Priority</h4>
                     <p>We need 20-30 committed households before property acquisition. Progressive involvement through design workshops, governance participation, Ubuntu training, and community building activities creates authentic founding group rather than speculative buyers. This is not traditional property sales - this is community formation where you participate in creating what we're building together.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>🤝 Strategic Partnerships Development</h4>
+                    <h4>&#129309; Strategic Partnerships Development</h4>
                     <p>Seeking equipment manufacturers, renewable energy engineering firms, architectural services specializing in universal design, and traditional artisan mentors. Partnerships provide technical validation, cost reduction through strategic relationships, and credibility for funding applications.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>💼 Investment Sourcing Strategy in Development</h4>
+                    <h4>&#128188; Investment Sourcing Strategy in Development</h4>
                     <p>Targeting development finance institutions for patient social impact capital, community impact investors for medium-term returns with measurable outcomes, and technology innovation investors for breakthrough system demonstration. Investment materials preparation for institutional outreach beginning Q1 2026.</p>
                 </div>
             </div>
@@ -977,7 +1026,7 @@
 
             <div class="faq-item">
                 <div class="faq-question">Can I visit before deciding?</div>
-                <div class="faq-answer">Once founding community formation launches January 2026, monthly gatherings occur where prospective members experience community formation process, meet future neighbors, participate in design discussions, and assess whether !NAU aligns with their values. These are not property tours but authentic working sessions. You participate in real community formation activities rather than observing staged presentations. This ensures both you and existing founding members assess compatibility before mutual commitment.</div>
+                <div class="faq-answer">Once founding community formation launches in 2026, monthly gatherings occur where prospective members experience community formation process, meet future neighbors, participate in design discussions, and assess whether !NAU aligns with their values. These are not property tours but authentic working sessions. You participate in real community formation activities rather than observing staged presentations. This ensures both you and existing founding members assess compatibility before mutual commitment.</div>
             </div>
 
             <div class="faq-item">
@@ -996,37 +1045,37 @@
 
             <div class="documentation-grid">
                 <div class="doc-card">
-                    <div class="doc-icon">📋</div>
+                    <div class="doc-icon">&#128203;</div>
                     <h3>Complete Master Plan</h3>
                     <p>50-hectare spatial design, independence systems specifications, community facilities detail, artisan enterprise integration, universal accessibility features, Ubuntu governance structures, and 48-month implementation timeline.</p>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">💼</div>
+                    <div class="doc-icon">&#128188;</div>
                     <h3>Financial Framework</h3>
                     <p>Investment requirements totaling ZAR 62.38 million with detailed category breakdown. Revenue projections across multiple streams. Operating cost analysis. Break-even pathways. Risk assessment. Investor return analysis across different capital tiers.</p>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">📜</div>
+                    <div class="doc-icon">&#128220;</div>
                     <h3>Community Constitution</h3>
                     <p>Ubuntu philosophical foundation establishing governing principles. Governance structures including consensus-based decision-making. Accessibility commitments. Complete independence standards. Resident rights and responsibilities. Exit procedures.</p>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">📊</div>
+                    <div class="doc-icon">&#128202;</div>
                     <h3>Target Market Analysis</h3>
                     <p>Identification of 305,000-household addressable market. Buyer demographic and psychographic profiles focusing on middle-class professionals. Geographic targeting. Marketing channel strategy. Objection assessment and response frameworks.</p>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">🗓️</div>
+                    <div class="doc-icon">&#128197;</div>
                     <h3>Implementation Timeline</h3>
                     <p>48-month development schedule from funding through full operations. Regulatory approval milestones and engagement strategy. Construction phasing. Founding community formation activities. Revenue generation commencement targets.</p>
                 </div>
 
                 <div class="doc-card">
-                    <div class="doc-icon">🎯</div>
+                    <div class="doc-icon">&#127919;</div>
                     <h3>Investment Strategy</h3>
                     <p>Detailed capital raise approach across development finance institutions, community impact investors, and technology innovation investors. Timeline for institutional outreach. Investor tier structures and participation benefits.</p>
                 </div>
@@ -1049,10 +1098,10 @@
         <div class="container">
             <h2>Stay Connected</h2>
             <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">
-                Subscribe to receive monthly updates on !NAU development progress, founding community formation activities, partnership announcements, regulatory milestones, and participation opportunities.
+                Subscribe to receive updates on !NAU development progress, founding community formation activities, partnership announcements, regulatory milestones, and participation opportunities.
             </p>
             <div style="background-color: white; border: 2px solid #8B4513; border-radius: 10px; padding: 1.5rem; max-width: 600px; margin: 2rem auto; text-align: center;">
-                <p style="margin: 0.5rem 0;"><strong>Email:</strong> <span style="font-size: 1.1rem; color: #8B4513;"><strong>info@nauintentionalcommunity.co.za</strong></span></p>
+                <p style="margin: 0.5rem 0; color: #333;"><strong>Email:</strong> <span style="font-size: 1.1rem; color: #8B4513;"><strong>info@nauintentionalcommunity.co.za</strong></span></p>
                 <p style="margin: 0.5rem 0; color: #666;">Subject: Newsletter Subscription</p>
             </div>
             <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
@@ -1100,7 +1149,7 @@
                     <p style="margin-top: 1rem;">
                         <strong>Project Developer:</strong> Peter Jacops<br>
                         <strong>Phone:</strong> 071 276 5502<br>
-                        <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#21484f474e614f4054484f55444f55484e4f404d424e4c4c544f4855580f424e0f5b40" style="color: var(--accent-color);"><span class="__cf_email__" data-cfemail="3b52555d547b555a4e52554f5e554f5254555a57585456564e55524f4215585415415a">[email&#160;protected]</span></a><br>
+                        <strong>Email:</strong> info@nauintentionalcommunity.co.za<br>
                         <strong>Location:</strong> Cape Town Region, South Africa<br>
                         <strong>Status:</strong> Planning Complete, Formation Launching 2026
                     </p>
@@ -1122,9 +1171,9 @@
                     <ul class="footer-links">
                         <li><a href="#founding-member">Join Founding Community</a></li>
                         <li><a href="#partners">Partnership Opportunities</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#30595e565f705e5145595e44555e44595f5e515c535f5d5d455e5944491e535f1e4a510f4345525a5553440d795e465543445d555e4410795e565f425d5144595f5e1062554145554344">Investment Information</a></li>
+                        <li><a href="mailto:info@nauintentionalcommunity.co.za?subject=Investment%20Information%20Request">Investment Information</a></li>
                         <li><a href="#documentation">Request Documentation</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#c2abaca4ad82aca3b7abacb6a7acb6abadaca3aea1adafafb7acabb6bbeca1adecb8a3fdb1b7a0a8a7a1b6ff8ca7b5b1aea7b6b6a7b0e291b7a0b1a1b0abb2b6abadac">Subscribe to Updates</a></li>
+                        <li><a href="mailto:info@nauintentionalcommunity.co.za?subject=Newsletter%20Subscription">Subscribe to Updates</a></li>
                     </ul>
                 </div>
 
@@ -1132,4 +1181,20 @@
                     <h3>Resources</h3>
                     <ul class="footer-links">
                         <li><a href="#documentation">Master Plan</a></li>
-                        <li><a href="#documentation">Fi
+                        <li><a href="#documentation">Financial Framework</a></li>
+                        <li><a href="#documentation">Community Constitution</a></li>
+                        <li><a href="#documentation">Target Market Analysis</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 !NAU Complete Independence Community. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Live Light. Root Deep. Thrive Together.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

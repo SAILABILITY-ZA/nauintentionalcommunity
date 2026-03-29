@@ -1,551 +1,1058 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>!NAU - Complete Independence Community | Cape Town, South Africa</title>
-    <meta name="description" content="!NAU is developing Africa's first complete independence community where families achieve complete independence through revolutionary technology and Ubuntu cooperation rooted in Khoikhoi wisdom.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-color: #8B4513; --secondary-color: #A0522D; --accent-color: #CD853F;
-            --accent-dark: #D2691E; --dark-color: #3E2723; --light-color: #F5F5F0;
-            --text-color: #333333; --border-color: #E0DDD5; --cream: #F4E8D0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO: Title & Meta Description ═══ -->
+  <title>!NAU Intentional Community Cape Town | Off-Grid Homes with Ubuntu Cooperation</title>
+  <meta name="description" content="32 off-grid homes near Cape Town delivering 100% energy and water independence. Middle-class pricing from R1.2M. Ubuntu governance, artisan economy, and universal design rooted in Khoikhoi wisdom.">
+  <meta name="keywords" content="off-grid community South Africa, intentional community Cape Town, eco village Cape Town, Ubuntu community living, load shedding proof homes, rent to own sustainable home Cape Town, off-grid homes Western Cape, Khoikhoi community, !NAU">
+  <meta name="author" content="Peter Jacops — Blue Peter Marine">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.nauintentionalcommunity.co.za/">
+
+  <!-- ═══ SEO: Open Graph (Facebook, WhatsApp, LinkedIn) ═══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.nauintentionalcommunity.co.za/">
+  <meta property="og:locale"      content="en_ZA">
+  <meta property="og:site_name"   content="!NAU Intentional Community">
+  <meta property="og:title"       content="!NAU — Complete Off-Grid Community Living Near Cape Town">
+  <meta property="og:description" content="32 off-grid homes near Cape Town with 100% energy and water independence. Middle-class pricing from R1.2M. Ubuntu governance rooted in Khoikhoi wisdom.">
+  <meta property="og:image"       content="https://www.nauintentionalcommunity.co.za/Logo.jpg">
+  <meta property="og:image:alt"   content="!NAU Intentional Community — off-grid Ubuntu living near Cape Town">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ═══ SEO: Twitter / X Card ═══ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="!NAU — Complete Off-Grid Community Living Near Cape Town">
+  <meta name="twitter:description" content="32 off-grid homes with 100% energy and water independence. Middle-class pricing from R1.2M. Ubuntu governance rooted in Khoikhoi wisdom.">
+  <meta name="twitter:image"       content="https://www.nauintentionalcommunity.co.za/Logo.jpg">
+
+  <!-- ═══ SEO: JSON-LD — Organization ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "!NAU Intentional Community",
+    "alternateName": "NAU Complete Independence Community",
+    "url": "https://www.nauintentionalcommunity.co.za/",
+    "logo": "https://www.nauintentionalcommunity.co.za/Logo.jpg",
+    "description": "A residential community near Cape Town where 32 households achieve complete independence from municipal infrastructure through Ubuntu cooperation and revolutionary dual-purpose renewable technology, rooted in Khoikhoi wisdom.",
+    "telephone": "+27712765502",
+    "email": "info@nauintentionalcommunity.co.za",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cape Town",
+      "addressRegion": "Western Cape",
+      "addressCountry": "ZA"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Peter Jacops"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- ═══ SEO: JSON-LD — Real Estate / Accommodation ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Accommodation",
+    "name": "!NAU Complete Independence Community — Residential Development",
+    "description": "32 off-grid homes near Cape Town with 100% energy and water independence. Homes range from 60 to 100 square metres. Priced from R1.2 million to R1.8 million. Progressive rent-to-own pathways available. Ubuntu governance, artisan economy, and universal accessibility.",
+    "url": "https://www.nauintentionalcommunity.co.za/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cape Town",
+      "addressRegion": "Western Cape",
+      "addressCountry": "ZA"
+    },
+    "numberOfRooms": 32,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "100% solar energy independence", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "100% water independence via rainwater and borehole", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Universal accessibility design", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Artisan workshop economy", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Ubuntu governance", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "50% fresh food production on site", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Progressive rent-to-own pathway", "value": true }
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "ZAR",
+      "lowPrice": 1200000,
+      "highPrice": 1800000,
+      "offerCount": 32
+    }
+  }
+  </script>
+
+  <!-- ═══ SEO: JSON-LD — FAQ Page ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is !NAU a commune where everything is shared?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. !NAU provides private home ownership in homes of 60 to 100 square metres. You own your home and make your own household decisions. Shared facilities exist for when you want community connection or need resources impossible to afford individually. Participation is voluntary, not mandatory."
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); background-color: #FFFFFF; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: rgba(139, 69, 19, 0.95); backdrop-filter: blur(10px); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { display: flex; align-items: center; gap: 1rem; }
-        .logo img { height: 60px; width: auto; filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-title { font-size: 1.8rem; font-weight: bold; color: white; line-height: 1; }
-        .logo-subtitle { font-size: 0.85rem; font-weight: normal; opacity: 0.9; margin-top: 0.25rem; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; transition: all 0.3s; font-weight: 500; padding: 0.5rem 1rem; border-radius: 25px; }
-        .nav-links a:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
-        .hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 6rem 0; text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,0 1000,300 1000,1000 0,700"/></svg>'); animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-        .hero-content { position: relative; z-index: 2; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-        .hero-subtitle { font-size: 1.3rem; margin-bottom: 2rem; line-height: 1.6; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero-description { font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto 2rem; opacity: 0.95; }
-        .status-badge { display: inline-block; background: linear-gradient(45deg, var(--accent-color), var(--accent-dark)); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; margin-bottom: 2rem; font-weight: 600; box-shadow: 0 4px 15px rgba(205, 133, 63, 0.4); }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem; }
-        .btn-primary { background: linear-gradient(45deg, var(--accent-color), var(--accent-dark)); color: white; box-shadow: 0 4px 15px rgba(205, 133, 63, 0.4); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(205, 133, 63, 0.6); }
-        .btn-secondary { background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); }
-        .btn-secondary:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
-        section { padding: 5rem 0; }
-        section:nth-child(even) { background-color: var(--light-color); }
-        h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center; }
-        h3 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem; margin-top: 2rem; }
-        p { margin-bottom: 1.5rem; line-height: 1.8; }
-        .video-section { background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%); padding: 5rem 0; text-align: center; }
-        .video-section h2 { color: white; margin-bottom: 1rem; }
-        .video-section p { color: rgba(255,255,255,0.85); max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.15rem; }
-        .video-wrapper { max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.5); border: 3px solid var(--accent-color); }
-        .video-wrapper video { width: 100%; display: block; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .feature-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.15); transition: transform 0.3s; border-top: 3px solid var(--accent-color); }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(139, 69, 19, 0.2); }
-        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .feature-card h3 { color: var(--primary-color); margin-top: 0; margin-bottom: 1rem; font-size: 1.5rem; }
-        .stats { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; text-align: center; padding: 4rem 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .stat-item { padding: 1.5rem; }
-        .stat-number { font-size: 3rem; font-weight: bold; color: var(--accent-color); display: block; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-        .stat-label { font-size: 1.1rem; opacity: 0.9; }
-        .tech-specs { background: white; padding: 2rem; border-left: 4px solid var(--accent-color); margin: 2rem 0; border-radius: 5px; box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1); }
-        .tech-specs ul { list-style: none; padding-left: 0; }
-        .tech-specs li { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); }
-        .tech-specs li:last-child { border-bottom: none; }
-        .tech-specs li:before { content: "\2713  "; color: var(--accent-color); font-weight: bold; margin-right: 0.5rem; }
-        .participation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .participation-card { background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.15); border-top: 4px solid var(--accent-color); }
-        .participation-card h3 { margin-top: 0; color: var(--primary-color); }
-        .participation-card ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
-        .participation-card li { margin-bottom: 0.75rem; line-height: 1.6; }
-        .faq-item { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 5px; border-left: 3px solid var(--accent-color); box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1); }
-        .faq-question { font-weight: 600; color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.75rem; }
-        .faq-answer { line-height: 1.8; }
-        .newsletter { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 4rem 0; text-align: center; }
-        .newsletter h2 { color: white; }
-        footer { background-color: var(--dark-color); color: white; padding: 3rem 0 1rem; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h3 { color: var(--accent-color); margin-bottom: 1rem; margin-top: 0; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 0.5rem; }
-        .footer-links a { color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; }
-        .footer-links a:hover { opacity: 1; color: var(--accent-color); }
-        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.7; }
-        .documentation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .doc-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.15); border-top: 3px solid var(--accent-color); }
-        .doc-card h3 { margin-top: 0; color: var(--primary-color); font-size: 1.3rem; }
-        .doc-icon { font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color); }
-        .highlight-box { background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; box-shadow: 0 4px 15px rgba(205, 133, 63, 0.3); }
-        .highlight-box h3 { color: white; margin-top: 0; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; } .hero-subtitle { font-size: 1.1rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; }
-            .nav-links { gap: 1rem; } .logo img { height: 50px; } .logo-title { font-size: 1.5rem; }
-            .features-grid, .participation-grid, .documentation-grid { grid-template-columns: 1fr; }
-            .video-wrapper { margin: 0 10px; }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if load-shedding ends or municipal services improve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Complete independence provides value beyond crisis protection. You eliminate ZAR 2,700 monthly in utility costs permanently regardless of service performance. You gain energy security for remote work and medical equipment, water security during droughts, and authentic multicultural community through Ubuntu cooperation. Improved service delivery would not reduce !NAU's value — it would simply shift the emphasis from resilience to quality-of-life enhancement."
         }
-        html { scroll-behavior: smooth; }
-    </style>
+      },
+      {
+        "@type": "Question",
+        "name": "How is !NAU different from other eco-villages near Cape Town?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most eco-villages target wealthy lifestyle seekers with homes priced at ZAR 3 to 5 million. !NAU targets middle-class professionals with homes from ZAR 1.2 million, using revolutionary dual-purpose technology that harvests both solar energy and rainwater from the same infrastructure. We integrate 40-plus employment opportunities through artisan enterprises, practice authentic Ubuntu philosophy rooted in Khoikhoi wisdom, and ensure universal accessibility for all abilities from inception."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I join !NAU if I cannot afford to buy outright?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Progressive ownership pathways starting at ZAR 6,500 to 9,500 monthly enable rental-market families to build equity toward full homeownership over 15 years. Rent-to-own participants access identical independence benefits, community participation, and employment opportunities, and hold full voting rights in Ubuntu governance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does !NAU achieve 100% energy and water independence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "!NAU uses a dual-purpose solar panel system with integrated rainwater collection channels, harvesting both sunshine and rainfall from the same infrastructure. The community has a 512kW solar array generating up to 2,100kWh daily, 1,447kWh of centralised battery storage providing 4.2 days of autonomy, and 750,000 litres of water storage providing 42-plus days supply during drought. Multi-source water strategy combines rainwater harvest, borehole extraction, and greywater recycling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the !NAU name mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "!Nau is a profound spiritual process in Khoikhoi culture representing spiritual rebirth and the acquiring of new responsibilities within society. The exclamation mark represents the Khoikhoi click consonant, honouring South Africa's indigenous First Nations heritage. The name reflects the community's mission of transformation from dependence to independence, from isolation to authentic Ubuntu connection."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --earth:    #2C1A0E;
+      --ochre:    #C17D3C;
+      --rust:     #A85C2A;
+      --sand:     #F2E4CC;
+      --cream:    #FAF6EF;
+      --moss:     #4A6741;
+      --sky:      #7FB3C8;
+      --white:    #FFFFFF;
+      --mid:      #7A6050;
+      --border:   #DDD0BE;
+      --shadow:   rgba(44,26,14,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--cream);
+      color: var(--earth);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    a { color: var(--rust); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--earth);
+      border-bottom: 3px solid var(--ochre);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--sand);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--sand);
+      font-family: Georgia, serif;
+      font-size: 0.88rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.15s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.12);
+      text-decoration: none;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      background: var(--earth);
+      color: var(--sand);
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+      border-bottom: 4px solid var(--ochre);
+    }
+
+    .hero-logo {
+      margin: 0 auto 1.5rem;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--sand);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.05rem;
+      color: #C8B89A;
+      max-width: 55ch;
+      margin: 0 auto 1rem;
+      font-style: italic;
+    }
+
+    .hero .status-badge {
+      display: inline-block;
+      background: var(--ochre);
+      color: var(--earth);
+      font-size: 0.78rem;
+      font-family: Georgia, serif;
+      padding: 0.3rem 1rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.4rem;
+      border-radius: 3px;
+      font-family: Georgia, serif;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+
+    .btn-primary   { background: var(--ochre); color: var(--earth); font-weight: bold; }
+    .btn-secondary { background: transparent; color: var(--sand); border: 1px solid var(--sand); }
+
+    /* ─── Sections ─── */
+    section { padding: 3.5rem 1.5rem; }
+    section:nth-child(even) { background: var(--white); }
+
+    .section-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      color: var(--earth);
+      margin-bottom: 1.2rem;
+      border-left: 4px solid var(--ochre);
+      padding-left: 0.9rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--rust);
+      margin: 1.4rem 0 0.5rem;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      color: var(--earth);
+      margin: 1.2rem 0 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    li { margin-bottom: 0.3rem; }
+
+    /* ─── Stats Bar ─── */
+    .stats-bar {
+      background: var(--ochre);
+      padding: 1.5rem;
+    }
+
+    .stats-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .stat-item .stat-value {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--earth);
+      display: block;
+      line-height: 1.1;
+    }
+
+    .stat-item .stat-label {
+      font-size: 0.78rem;
+      color: var(--earth);
+      opacity: 0.8;
+    }
+
+    /* ─── Features Grid ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--ochre);
+      padding: 1.4rem;
+      border-radius: 2px;
+    }
+
+    .feature-card .icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: var(--earth);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--mid);
+      margin: 0;
+    }
+
+    /* ─── Video ─── */
+    .video-wrap {
+      max-width: 720px;
+      margin: 1.5rem auto 0;
+      background: var(--earth);
+      border-radius: 3px;
+      overflow: hidden;
+      border: 2px solid var(--ochre);
+    }
+
+    .video-wrap video {
+      width: 100%;
+      display: block;
+    }
+
+    /* ─── Tech bullets ─── */
+    .tech-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .tech-list li {
+      padding: 0.5rem 0 0.5rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      font-size: 0.93rem;
+    }
+
+    .tech-list li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--ochre);
+      font-weight: bold;
+    }
+
+    /* ─── Participation Cards ─── */
+    .participate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+      margin-top: 1.5rem;
+    }
+
+    .participate-card {
+      border: 1px solid var(--border);
+      padding: 1.4rem;
+      border-radius: 2px;
+      background: var(--cream);
+    }
+
+    .participate-card h3 {
+      margin-top: 0;
+      color: var(--earth);
+      font-size: 1.05rem;
+      border-bottom: 2px solid var(--ochre);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .email-block {
+      background: var(--earth);
+      color: var(--sand);
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+      border-radius: 2px;
+      font-size: 0.88rem;
+    }
+
+    .email-block strong { color: var(--ochre); display: block; margin-bottom: 0.2rem; }
+
+    /* ─── Investment Tiers ─── */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .tier-card {
+      background: var(--earth);
+      color: var(--sand);
+      padding: 1.2rem;
+      border-radius: 2px;
+      border-top: 3px solid var(--ochre);
+    }
+
+    .tier-card .tier-name { font-size: 0.78rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; }
+    .tier-card .tier-return { font-size: 1.3rem; font-weight: bold; color: var(--ochre); margin: 0.3rem 0; }
+    .tier-card .tier-note { font-size: 0.82rem; opacity: 0.8; }
+
+    /* ─── Value Prop ─── */
+    .value-prop {
+      background: var(--earth);
+      color: var(--sand);
+      padding: 1.4rem 1.6rem;
+      border-radius: 2px;
+      margin-top: 1.2rem;
+      border-left: 4px solid var(--ochre);
+    }
+
+    .value-prop p { margin: 0.3rem 0; font-size: 0.93rem; }
+    .value-prop .vp-net { font-size: 1.05rem; font-weight: bold; color: var(--ochre); margin-top: 0.6rem; }
+
+    /* ─── FAQ ─── */
+    details {
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 0;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      color: var(--earth);
+      font-size: 0.95rem;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--ochre);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    details .answer {
+      padding: 0.8rem 0 0.2rem;
+      font-size: 0.92rem;
+      color: var(--mid);
+    }
+
+    /* ─── Documentation ─── */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .doc-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 1.2rem;
+      border-radius: 2px;
+      font-size: 0.88rem;
+    }
+
+    .doc-card .doc-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+    .doc-card h3 { font-size: 0.95rem; margin-top: 0; color: var(--earth); }
+    .doc-card p { margin: 0; color: var(--mid); }
+
+    /* ─── About ─── */
+    .commitment-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .commitment-list li {
+      padding: 0.6rem 0 0.6rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      font-size: 0.92rem;
+    }
+
+    .commitment-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--ochre);
+      font-size: 0.7rem;
+      top: 0.85rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--earth);
+      color: #9A8070;
+      padding: 2.5rem 1.5rem;
+      border-top: 3px solid var(--ochre);
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+
+    footer h4 {
+      color: var(--sand);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+    }
+
+    footer ul { list-style: none; padding: 0; }
+    footer li { margin-bottom: 0.3rem; }
+    footer a { color: #9A8070; font-size: 0.88rem; }
+    footer a:hover { color: var(--sand); }
+
+    .footer-contact p { font-size: 0.88rem; margin-bottom: 0.3rem; }
+    .footer-contact a { color: var(--ochre); }
+
+    .footer-tagline {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #3C2A1A;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #7A6050;
+    }
+
+    .footer-tagline strong { color: var(--ochre); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1rem 2rem; }
+      section { padding: 2.5rem 1rem; }
+      nav { padding: 0.6rem 1rem; }
+      .nav-links { display: none; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="Logo.jpg" alt="!NAU Logo - Khoikhoi Spiritual Symbol">
-                <div class="logo-text">
-                    <span class="logo-title">!NAU</span>
-                    <span class="logo-subtitle">Complete Independence Community</span>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#why-nau">Why !NAU</a></li>
-                <li><a href="#innovation">Innovation</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#participate">Participate</a></li>
-                <li><a href="mailto:info@nauintentionalcommunity.co.za">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Complete Independence Community</h1>
-                <p class="hero-subtitle">Where families achieve complete independence through revolutionary technology and Ubuntu cooperation</p>
-                <div class="status-badge">Comprehensive Planning Complete | Founding Community Formation Launching 2026</div>
-                <p class="hero-description">
-                    We are developing !NAU - a residential community in the Cape Town region where 32 households will live entirely independent of electricity grid, water supply, and waste services. Through revolutionary dual-purpose technology and cooperative economics, we're making complete independence accessible at middle-class prices.
-                </p>
-                <p class="hero-description">
-                    We're seeking founding community members, strategic partners, and aligned investors to bring this vision to reality.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#founding-member" class="btn btn-primary">Join Our Founding Community</a>
-                    <a href="#partners" class="btn btn-secondary">Explore Partnerships</a>
-                    <a href="#documentation" class="btn btn-secondary">Request Documentation</a>
-                </div>
-            </div>
+<!-- ═══ Navigation ═══ -->
+<nav aria-label="Main navigation">
+  <span class="nav-brand">!NAU</span>
+  <ul class="nav-links">
+    <li><a href="#why-nau">Why !NAU</a></li>
+    <li><a href="#innovation">Energy & Water</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#participate">Participate</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#650c0b030a250b04100c0b11000b110c0a0b0409060a0808100b0c111c4b060a4b1f04">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ Hero ═══ -->
+<header class="hero">
+  <img
+    src="https://www.nauintentionalcommunity.co.za/Logo.jpg"
+    alt="!NAU Intentional Community logo — Khoikhoi cultural symbol representing spiritual rebirth and Ubuntu cooperation, Cape Town"
+    class="hero-logo"
+    width="120"
+    height="120"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <h1>!NAU — Complete Off-Grid Community Living Near Cape Town</h1>
+  <p class="subtitle">Where families achieve complete independence through revolutionary technology and Ubuntu cooperation</p>
+  <span class="status-badge">Comprehensive Planning Complete &nbsp;·&nbsp; Founding Community Formation Launching 2026</span>
+  <p style="max-width:60ch;margin:0 auto 1.6rem;color:#C8B89A;font-size:0.93rem;">
+    We are developing !NAU — a residential community in the Cape Town region where 32 households will live entirely independent of the electricity grid, water supply, and waste services. Through revolutionary dual-purpose technology and cooperative economics, we are making complete off-grid independence accessible at middle-class prices.
+  </p>
+  <div class="hero-cta">
+    <a href="#founding-member" class="btn btn-primary">Join Our Founding Community</a>
+    <a href="#partners"        class="btn btn-secondary">Explore Partnerships</a>
+    <a href="#documentation"   class="btn btn-secondary">Request Documentation</a>
+  </div>
+</header>
+
+<!-- ═══ Stats Bar ═══ -->
+<div class="stats-bar" aria-label="Key project statistics">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="stat-value">32</span><span class="stat-label">Middle-Class Households</span></div>
+    <div class="stat-item"><span class="stat-value">100%</span><span class="stat-label">Energy Independence</span></div>
+    <div class="stat-item"><span class="stat-value">40+</span><span class="stat-label">Artisan Employment Opportunities</span></div>
+    <div class="stat-item"><span class="stat-value">R1.2–1.8M</span><span class="stat-label">Home Prices</span></div>
+    <div class="stat-item"><span class="stat-value">R2,700</span><span class="stat-label">Monthly Utility Costs Eliminated</span></div>
+  </div>
+</div>
+
+<!-- ═══ Video ═══ -->
+<section id="video" style="background:var(--earth);padding:2.5rem 1.5rem;">
+  <div class="section-inner" style="text-align:center;">
+    <h2 style="color:var(--sand);border-color:var(--ochre);">Discover !NAU</h2>
+    <p style="color:#C8B89A;margin-bottom:1.2rem;">Watch our introduction to understand how complete off-grid independence through Ubuntu cooperation is becoming reality for middle-class South African families.</p>
+    <div class="video-wrap">
+      <video
+        controls
+        preload="none"
+        poster="https://www.nauintentionalcommunity.co.za/Logo.jpg"
+        width="100%"
+        aria-label="Introduction to !NAU Intentional Community — off-grid Ubuntu living near Cape Town"
+      >
+        <source src="nau-intro.mp4" type="video/mp4">
+        Your browser does not support video playback.
+        <a href="nau-intro.mp4">Download the !NAU introduction video</a>
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Why !NAU ═══ -->
+<section id="why-nau">
+  <div class="section-inner">
+    <h2>Why Off-Grid Community Living Makes Sense in South Africa</h2>
+    <p>South Africa's infrastructure challenges affect millions of families. Load-shedding, water interruptions, and service pressures force middle-class households to spend ZAR 2,000–8,000 monthly on backup systems while remaining vulnerable to ongoing disruption.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="icon">⚡</span>
+        <h3>Complete Systems Independence</h3>
+        <p>Not solar panels as an amenity but total freedom. 100 percent energy independence. 100 percent water independence through multiple sources. Zero waste dependency. 50 percent fresh food production.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🤝</span>
+        <h3>Ubuntu Cooperation</h3>
+        <p>African philosophy at our foundation. "I am because we are." Every decision considers both individual households and collective wellbeing. Authentic multicultural integration. Consensus-based governance.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">♿</span>
+        <h3>Universal Accessibility</h3>
+        <p>Every system, residence, and facility designed for participation by all abilities. Universal design integrated from inception, not retrofitted. No one excluded from independence benefits.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🛠</span>
+        <h3>Integrated Artisan Economy</h3>
+        <p>Forty-plus permanent employment opportunities through traditional craft workshops and food production enterprises. Preserving South African cultural heritage while creating economic resilience.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">💰</span>
+        <h3>Middle-Class Affordability</h3>
+        <p>Homes ZAR 1.2–1.8 million versus ZAR 3–5 million for typical off-grid properties. Progressive ownership pathways for rental market families. Complete independence accessible to healthcare workers, teachers, and government employees.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🌍</span>
+        <h3>Cultural Preservation</h3>
+        <p>Traditional South African crafts and practices preserved through integrated artisan workshops. Multicultural celebration rather than cultural separation. Ubuntu values guiding modern community life.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:1.8rem;font-style:italic;border-left:3px solid var(--ochre);padding-left:1rem;color:var(--mid);">
+      This is not about escaping to isolated luxury. This is about middle-class families achieving complete independence through cooperation, cultural integration, and shared prosperity accessible to all abilities.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ Innovation ═══ -->
+<section id="innovation">
+  <div class="section-inner">
+    <h2>How !NAU Achieves Complete Energy and Water Independence</h2>
+    <p>Traditional developments build separate expensive systems for energy and water. !NAU uses solar panels with integrated collection channels that harvest both sunshine and rainfall from the same infrastructure — making complete off-grid independence achievable at middle-class prices.</p>
+
+    <h3>Technical Specifications</h3>
+    <ul class="tech-list">
+      <li>512kW community solar array generating 1,800–2,100kWh daily across 840 high-efficiency panels</li>
+      <li>Same panels collecting rainwater through built-in channels providing 2.8 million litres annually</li>
+      <li>1,447kWh centralised battery storage in climate-controlled facility providing 4.2 days autonomy</li>
+      <li>750,000-litre water storage capacity across distributed tanks providing 42-plus days supply during drought</li>
+      <li>Multi-source water strategy: rainwater harvest 38.6%, borehole extraction 40%, greywater recycling 21.4%</li>
+      <li>30–40 percent cost reduction versus separate renewable energy and water infrastructure</li>
+    </ul>
+
+    <h3>Zero Waste Systems</h3>
+    <p>500 square metre composting facility converting organic waste into agricultural inputs. Biogas production capturing methane for cooking fuel. On-site recycling processing. Constructed wetlands treating greywater while creating habitat.</p>
+
+    <h3>Food Production</h3>
+    <p>2,000 square metre climate-controlled greenhouse for year-round production. 5,000 square metre outdoor cultivation with agrivoltaic integration. Protein production including a laying operation and aquaponics. 50 percent fresh food independence.</p>
+
+    <h3>Local Fabrication</h3>
+    <p>Locally-fabricated mounting systems by the community metalworking workshop reduce imported component costs. Climate-controlled battery housing built using local construction. Installation coordinated with training programmes creating hands-on renewable energy learning.</p>
+
+    <p>Revolutionary technology protected through patent applications creates a framework replicable across 600-plus South African municipalities seeking resilient infrastructure solutions.</p>
+  </div>
+</section>
+
+<!-- ═══ Community ═══ -->
+<section id="community">
+  <div class="section-inner">
+    <h2>Community Life at !NAU</h2>
+    <p>Smaller private homes of 60–100 square metres serve as peaceful family retreats providing privacy and rest. Extensive shared facilities foster authentic connection without forcing constant interaction.</p>
+
+    <h3>Professional Spaces</h3>
+    <p>Co-working spaces with guaranteed renewable power supporting remote work and entrepreneurship. High-speed internet. Private offices and collaboration areas. Meeting rooms for community governance.</p>
+
+    <h3>Wellness Facilities</h3>
+    <p>Wellness centre with accessible equipment including adaptive technologies. Fitness facilities. Meditation gardens. Health services hub. Therapeutic programmes for residents of all abilities.</p>
+
+    <h3>Artisan Workshops</h3>
+    <p>Community workshops equipped with professional tools. Carpentry, metalworking, leatherwork, pottery. Bakery, butchery, microbrewery, restaurant. Traditional crafts preserved through active practice.</p>
+
+    <h3>Shared Resources</h3>
+    <p>Tool libraries eliminating duplicate purchases. Commercial kitchens for food processing. Cultural gathering areas for celebrations. Innovation laboratories for technology development.</p>
+
+    <h3>Ubuntu Governance in Practice</h3>
+    <ul>
+      <li>Ubuntu Council with representatives from all household types, abilities, and cultural backgrounds</li>
+      <li>Consensus-based decision-making seeking community harmony through accessible participation</li>
+      <li>Traditional practices inform modern governance procedures</li>
+      <li>Conflict resolution uses Ubuntu mediation principles maintaining cohesion while respecting dignity</li>
+      <li>Regular cultural celebration events rotating between represented traditions</li>
+    </ul>
+
+    <h3>Monthly Household Value Proposition</h3>
+    <div class="value-prop">
+      <p>Costs eliminated: ZAR 2,000 electricity + ZAR 500 water + ZAR 1,500 food reduction = ZAR 4,000 monthly savings</p>
+      <p>Community levy: ZAR 2,850 covering all system maintenance, security, and facility access</p>
+      <p class="vp-net">Net benefit: ZAR 1,150 monthly savings while living completely off-grid and independent</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Participate ═══ -->
+<section id="participate">
+  <div class="section-inner">
+    <h2>How You Can Participate</h2>
+
+    <div class="participate-grid">
+
+      <!-- Founding Member -->
+      <div class="participate-card" id="founding-member">
+        <h3>Join as a Founding Community Member</h3>
+        <p>We are seeking 20–30 households to form our founding community before property acquisition. Founding members participate in community design, governance structure development, Ubuntu training, and receive priority home selection plus pricing protection.</p>
+        <h4>Who we are looking for</h4>
+        <ul>
+          <li>Middle-class professionals earning ZAR 25,000–50,000 monthly</li>
+          <li>Healthcare workers, teachers, government employees, skilled technicians</li>
+          <li>Committed to multicultural integration and Ubuntu philosophy</li>
+          <li>Financially qualified for home purchase or progressive ownership</li>
+          <li>Seeking authentic community rather than purchased amenities</li>
+        </ul>
+        <div class="email-block">
+          <strong>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48d8a828ba48a85918d8a90818a908d8b8a8588878b8989918a8d909dca878bca9e85">[email&#160;protected]</a></strong>
+          Subject: Founding Member Interest
         </div>
-    </section>
+      </div>
 
-    <section class="video-section">
-        <div class="container">
-            <h2>Discover !NAU</h2>
-            <p>Watch our introduction to understand how complete independence through Ubuntu cooperation is becoming reality for middle-class South African families.</p>
-            <div class="video-wrapper">
-                <video controls preload="metadata" poster="">
-                    <source src="Small !NAU Intro.mp4" type="video/mp4">
-                    Your browser does not support video playback. Please update your browser to view this content.
-                </video>
-            </div>
+      <!-- Partners -->
+      <div class="participate-card" id="partners">
+        <h3>Partner as a Strategic Advisor or Supplier</h3>
+        <p>We are seeking partnerships with organisations whose capabilities and values align with !NAU's mission of making complete independence accessible through Ubuntu cooperation rooted in Khoikhoi wisdom.</p>
+        <h4>Partnership opportunities</h4>
+        <ul>
+          <li>Equipment manufacturers: solar panels, batteries, water treatment, agricultural systems</li>
+          <li>Technical expertise: renewable energy engineering, sustainable agriculture, universal design architecture</li>
+          <li>Educational institutions: research partnerships, curriculum development, student projects</li>
+          <li>Traditional craft mentors: preserving authentic cultural techniques in artisan workshops</li>
+        </ul>
+        <div class="email-block">
+          <strong>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de4e3ebe2cde3ecf8e4e3f9e8e3f9e4e2e3ece1eee2e0e0f8e3e4f9f4a3eee2a3f7ec">[email&#160;protected]</a></strong>
+          Subject: Partnership Inquiry
         </div>
-    </section>
+      </div>
 
-    <section class="stats">
-        <div class="container">
-            <h2 style="color: white;">!NAU By The Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-item"><span class="stat-number">32</span><span class="stat-label">Middle-Class Households</span></div>
-                <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Energy Independence</span></div>
-                <div class="stat-item"><span class="stat-number">40+</span><span class="stat-label">Artisan Employment Opportunities</span></div>
-                <div class="stat-item"><span class="stat-number">R1.2-1.8M</span><span class="stat-label">Home Prices</span></div>
-                <div class="stat-item"><span class="stat-number">R2,700</span><span class="stat-label">Monthly Utility Costs Eliminated</span></div>
-            </div>
+      <!-- Invest -->
+      <div class="participate-card">
+        <h3>Invest in Transformational Development</h3>
+        <p>!NAU requires ZAR 62.38 million development capital for complete infrastructure, residential construction, community facilities, artisan workshops, and independence systems.</p>
+        <h4>Investment tiers</h4>
+        <div class="tier-grid">
+          <div class="tier-card">
+            <div class="tier-name">Development Finance</div>
+            <div class="tier-return">8–12%</div>
+            <div class="tier-note">Returns with social impact (30% target)</div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-name">Community Impact</div>
+            <div class="tier-return">12–16%</div>
+            <div class="tier-note">Returns with measurable outcomes (25% target)</div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-name">Technology Innovation</div>
+            <div class="tier-return">14–18%</div>
+            <div class="tier-note">Returns plus licensing upside (20% target)</div>
+          </div>
         </div>
-    </section>
-
-    <section id="why-nau">
-        <div class="container">
-            <h2>Why !NAU Matters</h2>
-            <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 3rem;">
-                South Africa's infrastructure challenges affect millions of families. Load-shedding, water interruptions, and service pressures force middle-class households to spend ZAR 2,000-8,000 monthly on backup systems while remaining vulnerable to ongoing disruption.
-            </p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3>Complete Systems Independence</h3>
-                    <p>Not solar panels as amenity but total freedom. 100 percent energy independence. 100 percent water independence through multiple sources. Zero waste dependency. 50 percent fresh food production.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#129309;</div>
-                    <h3>Ubuntu Cooperation</h3>
-                    <p>African philosophy at our foundation. "I am because we are." Every decision considers both individual households and collective wellbeing. Authentic multicultural integration. Consensus-based governance.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#9855;</div>
-                    <h3>Universal Accessibility</h3>
-                    <p>Every system, residence, and facility designed for participation by all abilities. Universal design integrated from inception, not retrofitted. No one excluded from independence benefits.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128736;</div>
-                    <h3>Integrated Artisan Economy</h3>
-                    <p>Forty-plus permanent employment opportunities through traditional craft workshops and food production enterprises. Preserving South African cultural heritage while creating economic resilience.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Middle-Class Affordability</h3>
-                    <p>Homes ZAR 1.2-1.8 million versus ZAR 3-5 million for typical off-grid properties. Progressive ownership pathways for rental market families. Complete independence accessible to healthcare workers, teachers, government employees.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#127757;</div>
-                    <h3>Cultural Preservation</h3>
-                    <p>Traditional South African crafts and practices preserved through integrated artisan workshops. Multicultural celebration rather than cultural separation. Ubuntu values guiding modern community life.</p>
-                </div>
-            </div>
-            <div class="highlight-box" style="margin-top: 3rem;">
-                <h3>This is not about escaping to isolated luxury</h3>
-                <p style="margin-bottom: 0;">This is about middle-class families achieving complete independence through cooperation, cultural integration, and shared prosperity accessible to all abilities. We're proving that working together makes individual independence affordable while building authentic relationships and preserving cultural heritage.</p>
-            </div>
+        <div class="email-block" style="margin-top:1rem;">
+          <strong>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="026b6c646d426c63776b6c76676c766b6d6c636e616d6f6f776c6b767b2c616d2c7863">[email&#160;protected]</a></strong>
+          Subject: Investment Information Request
         </div>
-    </section>
+      </div>
 
-    <section id="innovation" style="background-color: var(--light-color);">
-        <div class="container">
-            <h2>Our Innovation: Dual-Purpose Technology</h2>
-            <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 3rem;">
-                Traditional developments build separate expensive systems for energy and water. !NAU revolutionizes this with solar panels featuring integrated collection channels harvesting both sunshine and rainfall from the same infrastructure.
-            </p>
-            <div class="tech-specs">
-                <h3 style="margin-top: 0;">Technical Achievement</h3>
-                <ul>
-                    <li>512kW community solar array generating 1,800-2,100kWh daily across 840 high-efficiency panels</li>
-                    <li>Same panels collecting rainwater through built-in channels providing 2.8 million litres annually</li>
-                    <li>1,447kWh centralized battery storage in climate-controlled facility providing 4.2 days autonomy</li>
-                    <li>750,000-litre water storage capacity across distributed tanks providing 42-plus days supply during drought</li>
-                    <li>Multi-source water strategy combining rainwater harvest (38.6%), borehole extraction (40%), and greywater recycling (21.4%)</li>
-                    <li>30-40 percent cost reduction versus separate renewable energy and water infrastructure</li>
-                </ul>
-            </div>
-            <div class="features-grid" style="margin-top: 3rem;">
-                <div class="feature-card">
-                    <h3>Zero Waste Systems</h3>
-                    <p>500 square meter composting facility converting organic waste into agricultural inputs. Biogas production capturing methane for cooking fuel. On-site recycling processing. Constructed wetlands treating greywater while creating habitat.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Food Production</h3>
-                    <p>2,000 square meter climate-controlled greenhouse for year-round production. 5,000 square meter outdoor cultivation with agrivoltaic integration. Protein production including laying operation and aquaponics. 50 percent fresh food independence.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Local Fabrication</h3>
-                    <p>Locally-fabricated mounting systems by community metalworking workshop reducing imported costs. Climate-controlled battery housing built using local construction. Installation coordinated with potential training programs creating hands-on learning.</p>
-                </div>
-            </div>
-            <div class="highlight-box" style="margin-top: 3rem;">
-                <h3>Cost Revolution Making Independence Accessible</h3>
-                <p style="margin-bottom: 0;">This breakthrough makes complete independence achievable at middle-class prices while creating opportunities for hands-on renewable energy training using operational community systems. Revolutionary technology protected through patent applications creates a framework replicable across 600-plus South African municipalities seeking resilient infrastructure solutions.</p>
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="community">
-        <div class="container">
-            <h2>Community Life at !NAU</h2>
-            <h3>Private Retreats Plus Abundant Shared Spaces</h3>
-            <p>Smaller homes (60-100 square meters) serve as peaceful family retreats providing privacy and rest. Extensive shared facilities foster authentic connection without forcing constant interaction.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Professional Spaces</h3>
-                    <p>Co-working spaces with guaranteed renewable power supporting remote work and entrepreneurship. High-speed internet. Private offices and collaboration areas. Meeting rooms for community governance.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Wellness Facilities</h3>
-                    <p>Wellness center with accessible equipment including adaptive technologies. Fitness facilities. Meditation gardens. Health services hub. Therapeutic programs for residents of all abilities.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Artisan Workshops</h3>
-                    <p>Community workshops equipped with professional tools. Carpentry, metalworking, leatherwork, pottery. Bakery, butchery, microbrewery, restaurant. Traditional crafts preserved through active practice.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Shared Resources</h3>
-                    <p>Tool libraries eliminating duplicate purchases. Commercial kitchens for food processing. Cultural gathering areas for celebrations. Innovation laboratories for technology development.</p>
-                </div>
-            </div>
-            <h3 style="margin-top: 3rem;">Multicultural Integration Through Ubuntu</h3>
-            <p>All residents commit to learning from represented cultural traditions, participating in multicultural celebrations, sharing cultural knowledge, and respecting diverse spiritual practices, languages, customs, and abilities.</p>
-            <div class="tech-specs">
-                <h4 style="margin-bottom: 1rem;">Ubuntu Governance in Practice</h4>
-                <ul>
-                    <li>Ubuntu Council with representatives from all household types, abilities, and cultural backgrounds</li>
-                    <li>Consensus-based decision-making seeking community harmony through accessible participation</li>
-                    <li>Traditional practices inform modern governance procedures</li>
-                    <li>Conflict resolution uses Ubuntu mediation principles maintaining cohesion while respecting dignity</li>
-                    <li>Regular cultural celebration events rotating between represented traditions</li>
-                </ul>
-            </div>
-            <h3>Economic Cooperation Creating Shared Prosperity</h3>
-            <p>Artisan workshops create employment for community members at all skill levels. Community members can work in enterprises full-time or part-time, contribute labor to reduce housing costs, learn traditional skills from master artisans, participate in business decisions through Ubuntu governance, and share in enterprise profits.</p>
-            <div class="highlight-box">
-                <h3>Monthly Household Value Proposition</h3>
-                <p><strong>Costs Eliminated:</strong> ZAR 2,000 electricity + ZAR 500 water + ZAR 1,500 food reduction = ZAR 4,000 monthly savings</p>
-                <p><strong>Community Levy:</strong> ZAR 2,850 covering all system maintenance, security, facility access</p>
-                <p style="margin-bottom: 0;"><strong>Net Benefit:</strong> ZAR 1,150 monthly savings while living completely independent</p>
-            </div>
-        </div>
-    </section>
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="section-inner">
+    <h2>Frequently Asked Questions About Off-Grid Community Living</h2>
 
-    <section id="participate">
-        <div class="container">
-            <h2>How You Can Participate</h2>
-            <div class="participation-grid">
-                <div class="participation-card" id="founding-member">
-                    <h3>Join as Founding Community Member</h3>
-                    <p>We're seeking 20-30 households to form our founding community before property acquisition. Founding members participate in community design, governance structure development, Ubuntu training, and receive priority home selection plus pricing protection.</p>
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-color);">Who We're Looking For</h4>
-                    <ul>
-                        <li>Middle-class professionals earning ZAR 25,000-50,000 monthly</li>
-                        <li>Healthcare workers, teachers, government employees, skilled technicians</li>
-                        <li>Committed to multicultural integration and Ubuntu philosophy</li>
-                        <li>Financially qualified for home purchase or progressive ownership</li>
-                        <li>Seeking authentic community rather than purchased amenities</li>
-                    </ul>
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-color);">What's Required</h4>
-                    <ul>
-                        <li>Expression of interest with background information</li>
-                        <li>Participation in monthly community formation gatherings</li>
-                        <li>Contribution to design and governance discussions</li>
-                        <li>Financial pre-qualification for participation</li>
-                        <li>Ubuntu philosophy alignment assessment</li>
-                    </ul>
-                    <div style="background-color: #f5f5f0; border: 2px solid #8B4513; border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-                        <h4 style="color: #8B4513; margin-top: 0;">Ready to Join?</h4>
-                        <p style="margin: 0.5rem 0;"><strong>Email us at:</strong></p>
-                        <p style="font-size: 1.2rem; color: #8B4513; margin: 0.5rem 0; word-break: break-all;"><strong>info@nauintentionalcommunity.co.za</strong></p>
-                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">Subject: Founding Member Interest</p>
-                        <p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">Copy the email address above and paste it into your email client</p>
-                    </div>
-                </div>
+    <details>
+      <summary>Is !NAU a commune where everything is shared?</summary>
+      <div class="answer">
+        <p>No. !NAU provides private home ownership in homes of 60–100 square metres. You own your home and make your own household decisions. You choose when to engage with the community and when to stay private. Shared facilities exist for when you want community connection or need resources impossible to afford individually. Participation is voluntary, not mandatory.</p>
+      </div>
+    </details>
 
-                <div class="participation-card" id="partners">
-                    <h3>Partner as Strategic Advisor or Supplier</h3>
-                    <p>We're seeking partnerships with organizations whose capabilities and values align with !NAU's mission of making complete independence accessible through Ubuntu cooperation rooted in Khoikhoi wisdom.</p>
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-color);">Partnership Opportunities</h4>
-                    <ul>
-                        <li><strong>Equipment Manufacturers:</strong> Solar panels, batteries, water treatment, agricultural systems</li>
-                        <li><strong>Technical Expertise:</strong> Renewable energy engineering, sustainable agriculture, universal design architecture</li>
-                        <li><strong>Educational Institutions:</strong> Research partnerships, curriculum development, student projects</li>
-                        <li><strong>Traditional Craft Mentors:</strong> Preserving authentic cultural techniques in artisan workshops</li>
-                    </ul>
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-color);">Partnership Benefits</h4>
-                    <ul>
-                        <li>Long-term service contracts generating recurring revenue</li>
-                        <li>Demonstration project showcasing capabilities</li>
-                        <li>Case study development for market expansion</li>
-                        <li>Recognition in replication consulting work</li>
-                    </ul>
-                    <div style="background-color: #f5f5f0; border: 2px solid #8B4513; border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-                        <h4 style="color: #8B4513; margin-top: 0;">Interested in Partnering?</h4>
-                        <p style="margin: 0.5rem 0;"><strong>Email us at:</strong></p>
-                        <p style="font-size: 1.2rem; color: #8B4513; margin: 0.5rem 0; word-break: break-all;"><strong>info@nauintentionalcommunity.co.za</strong></p>
-                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">Subject: Partnership Inquiry</p>
-                        <p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">Copy the email address above and paste it into your email client</p>
-                    </div>
-                </div>
+    <details>
+      <summary>What happens if load-shedding ends or municipal services improve?</summary>
+      <div class="answer">
+        <p>Complete independence provides value beyond crisis protection. You eliminate ZAR 2,700 monthly in utility costs permanently regardless of service performance. You gain energy security for remote work and medical equipment, water security during droughts, and authentic multicultural community through Ubuntu cooperation. Improved service delivery would not reduce !NAU's value — it would simply shift the emphasis from resilience to quality-of-life enhancement.</p>
+      </div>
+    </details>
 
-                <div class="participation-card">
-                    <h3>Invest in Transformational Development</h3>
-                    <p>!NAU requires ZAR 62.38 million development capital for complete infrastructure, residential construction, community facilities, artisan workshops, and independence systems.</p>
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-color);">Investment Tiers</h4>
-                    <ul>
-                        <li><strong>Development Finance Institutions:</strong> 8-12% returns with social impact (30% target allocation)</li>
-                        <li><strong>Community Impact Investors:</strong> 12-16% returns with measurable outcomes (25% target allocation)</li>
-                        <li><strong>Technology Innovation Investors:</strong> 14-18% returns plus licensing upside (20% target allocation)</li>
-                        <li><strong>Residential Capital:</strong> Founding member deposits and payments (25% target allocation)</li>
-                    </ul>
-                    <p>Investment materials preparation for institutional outreach beginning Q1 2026. Full financial documentation, technical specifications, and impact measurement frameworks available upon request.</p>
-                    <div style="background-color: #f5f5f0; border: 2px solid #8B4513; border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-                        <h4 style="color: #8B4513; margin-top: 0;">Request Investment Information</h4>
-                        <p style="margin: 0.5rem 0;"><strong>Email us at:</strong></p>
-                        <p style="font-size: 1.2rem; color: #8B4513; margin: 0.5rem 0; word-break: break-all;"><strong>info@nauintentionalcommunity.co.za</strong></p>
-                        <p style="font-size: 0.9rem; margin: 0.5rem 0;">Subject: Investment Information Request</p>
-                        <p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">Copy the email address above and paste it into your email client</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <details>
+      <summary>How is !NAU different from other eco-villages near Cape Town?</summary>
+      <div class="answer">
+        <p>Most eco-villages target wealthy lifestyle seekers with homes priced at ZAR 3–5 million. !NAU targets middle-class professionals with homes from ZAR 1.2 million, using revolutionary dual-purpose technology that harvests both solar energy and rainwater from the same infrastructure. We integrate 40-plus employment opportunities through artisan enterprises, practice authentic Ubuntu philosophy rooted in Khoikhoi wisdom, and ensure universal accessibility for all abilities from inception.</p>
+      </div>
+    </details>
 
-    <section id="faq" style="background-color: var(--light-color);">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">What happens if load-shedding ends or service delivery improves?</div>
-                <div class="faq-answer">Complete independence provides value beyond crisis protection. You eliminate ZAR 2,700 monthly utility costs permanently regardless of service performance. You gain energy security for remote work and medical equipment. You achieve water security during droughts. You build authentic multicultural community through Ubuntu cooperation. Improved service delivery would not reduce !NAU's value proposition - it would simply shift the emphasis from resilience to quality-of-life enhancement.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Is this a commune where everything is shared?</div>
-                <div class="faq-answer">No. !NAU provides private home ownership (60-100 square meters) serving as family retreats. You own your home. You make decisions about your household. You choose when to engage with community and when to stay private. Shared facilities exist for when you want community connection or need resources impossible to afford individually. Participation is voluntary, not mandatory.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">How is this different from other eco-villages?</div>
-                <div class="faq-answer">Most eco-villages serve wealthy lifestyle seekers with luxury homes costing ZAR 3-5 million. !NAU targets middle-class professionals with homes ZAR 1.2-1.8 million achieving complete independence through revolutionary dual-purpose technology. We integrate 40-plus employment opportunities through artisan enterprises preserving South African cultural heritage. We practice authentic Ubuntu philosophy rooted in Khoikhoi wisdom rather than importing Western eco-aesthetics. We ensure universal accessibility for all abilities from inception. We're addressing real infrastructure resilience and middle-class empowerment, not creating a lifestyle community for the wealthy.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What if I can't afford to buy but want to participate?</div>
-                <div class="faq-answer">Progressive ownership pathways starting at ZAR 6,500-9,500 monthly enable rental market families to build equity toward homeownership. You access identical independence benefits, community participation, and enterprise employment opportunities while building ownership percentage over 15 years. Rent-to-own participants have full voting rights in governance and contribute to community decisions. Ownership percentage does not determine participation level.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">How do you ensure cultural integration works authentically?</div>
-                <div class="faq-answer">All residents commit before moving in to learning from other cultural traditions, participating in multicultural celebrations, sharing their own cultural knowledge, and respecting diverse spiritual practices, languages, customs, and abilities. Ubuntu Council governance includes representatives from all cultural backgrounds ensuring no single culture dominates decision-making. We assess cultural integration commitment during founding member selection, filtering for authentic interest rather than tolerance or superficial appreciation.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Can I visit before deciding?</div>
-                <div class="faq-answer">Once founding community formation launches in 2026, monthly gatherings occur where prospective members experience community formation process, meet future neighbors, participate in design discussions, and assess whether !NAU aligns with their values. These are not property tours but authentic working sessions. You participate in real community formation activities rather than observing staged presentations. This ensures both you and existing founding members assess compatibility before mutual commitment.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What if the project doesn't proceed or fails during development?</div>
-                <div class="faq-answer">All founding member deposits held in trust with clear refund procedures if project does not reach minimum thresholds for property acquisition. You risk time invested in community formation activities but not financial capital until we demonstrate achieving critical milestones. Comprehensive insurance and completion guarantees protect investor capital once construction launches. However, all development involves risk. We cannot guarantee success. We can only demonstrate thorough planning, realistic financial projections, experienced management, and transparent communication about challenges as they arise.</div>
-            </div>
-        </div>
-    </section>
+    <details>
+      <summary>Can I join !NAU if I cannot afford to buy outright?</summary>
+      <div class="answer">
+        <p>Yes. Progressive ownership pathways starting at ZAR 6,500–9,500 monthly enable rental-market families to build equity toward full homeownership over 15 years. Rent-to-own participants access identical independence benefits, community participation, and employment opportunities, and hold full voting rights in Ubuntu governance. Ownership percentage does not determine participation level.</p>
+      </div>
+    </details>
 
-    <section id="documentation">
-        <div class="container">
-            <h2>Our Documentation</h2>
-            <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 3rem;">
-                We believe transparency builds trust. All project planning documentation is available for review. Email us to request any of the following materials.
-            </p>
-            <div class="documentation-grid">
-                <div class="doc-card">
-                    <div class="doc-icon">&#128203;</div>
-                    <h3>Complete Master Plan</h3>
-                    <p>50-hectare spatial design, independence systems specifications, community facilities detail, artisan enterprise integration, universal accessibility features, Ubuntu governance structures, and 48-month implementation timeline.</p>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">&#128188;</div>
-                    <h3>Financial Framework</h3>
-                    <p>Investment requirements totaling ZAR 62.38 million with detailed category breakdown. Revenue projections across multiple streams. Operating cost analysis. Break-even pathways. Risk assessment. Investor return analysis across different capital tiers.</p>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">&#128220;</div>
-                    <h3>Community Constitution</h3>
-                    <p>Ubuntu philosophical foundation establishing governing principles. Governance structures including consensus-based decision-making. Accessibility commitments. Complete independence standards. Resident rights and responsibilities. Exit procedures.</p>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">&#128202;</div>
-                    <h3>Target Market Analysis</h3>
-                    <p>Identification of 305,000-household addressable market. Buyer demographic and psychographic profiles focusing on middle-class professionals. Geographic targeting. Marketing channel strategy. Objection assessment and response frameworks.</p>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">&#128197;</div>
-                    <h3>Implementation Timeline</h3>
-                    <p>48-month development schedule from funding through full operations. Regulatory approval milestones and engagement strategy. Construction phasing. Founding community formation activities. Revenue generation commencement targets.</p>
-                </div>
-                <div class="doc-card">
-                    <div class="doc-icon">&#127919;</div>
-                    <h3>Investment Strategy</h3>
-                    <p>Detailed capital raise approach across development finance institutions, community impact investors, and technology innovation investors. Timeline for institutional outreach. Investor tier structures and participation benefits.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <div style="background-color: #f5f5f0; border: 3px solid #8B4513; border-radius: 15px; padding: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center;">
-                    <h3 style="color: #8B4513; margin-top: 0;">Request Complete Documentation Package</h3>
-                    <p style="margin: 1rem 0;"><strong>Email us at:</strong></p>
-                    <p style="font-size: 1.3rem; color: #8B4513; margin: 1rem 0; word-break: break-all;"><strong>info@nauintentionalcommunity.co.za</strong></p>
-                    <p style="font-size: 1rem; margin: 1rem 0; color: #666;">Subject: Documentation Request</p>
-                    <p style="font-size: 0.9rem; margin-top: 1.5rem; padding: 1rem; background-color: white; border-radius: 8px;">Include in your email which documents you'd like:<br>Master Plan | Financial Framework | Community Constitution<br>Target Market Analysis | Implementation Timeline | Investment Strategy</p>
-                    <p style="font-size: 0.85rem; margin-top: 1rem; color: #666;">Copy the email address above and paste it into your email client</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <details>
+      <summary>How does !NAU achieve 100% energy and water independence?</summary>
+      <div class="answer">
+        <p>!NAU uses a dual-purpose solar panel system with integrated rainwater collection channels, harvesting both sunshine and rainfall from the same infrastructure. The community has a 512kW solar array generating up to 2,100kWh daily, 1,447kWh of centralised battery storage providing 4.2 days of autonomy, and 750,000 litres of water storage providing 42-plus days supply during drought. Multi-source water strategy combines rainwater harvest, borehole extraction, and greywater recycling.</p>
+      </div>
+    </details>
 
-    <section class="newsletter">
-        <div class="container">
-            <h2>Stay Connected</h2>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">
-                Subscribe to receive updates on !NAU development progress, founding community formation activities, partnership announcements, regulatory milestones, and participation opportunities.
-            </p>
-            <div style="background-color: white; border: 2px solid #8B4513; border-radius: 10px; padding: 1.5rem; max-width: 600px; margin: 2rem auto; text-align: center;">
-                <p style="margin: 0.5rem 0; color: #333;"><strong>Email:</strong> <span style="font-size: 1.1rem; color: #8B4513;"><strong>info@nauintentionalcommunity.co.za</strong></span></p>
-                <p style="margin: 0.5rem 0; color: #666;">Subject: Newsletter Subscription</p>
-            </div>
-            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">We respect your privacy and will never share your information. Unsubscribe anytime.</p>
-        </div>
-    </section>
+    <details>
+      <summary>How do you ensure cultural integration works authentically?</summary>
+      <div class="answer">
+        <p>All residents commit before moving in to learning from other cultural traditions, participating in multicultural celebrations, sharing their own cultural knowledge, and respecting diverse spiritual practices, languages, customs, and abilities. Ubuntu Council governance includes representatives from all cultural backgrounds, ensuring no single culture dominates decision-making. Cultural integration commitment is assessed during founding member selection.</p>
+      </div>
+    </details>
 
-    <section id="about" style="background-color: var(--light-color);">
-        <div class="container">
-            <h2>About !NAU</h2>
-            <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 2rem;">
-                !Nau is a profound spiritual process in Khoikhoi culture representing spiritual rebirth and acquiring new responsibilities within society, bridging the physical and ancestral worlds.
-            </p>
-            <p style="max-width: 800px; margin: 0 auto 2rem;">
-                The exclamation mark in !NAU is not stylistic but represents the click consonant from the Khoikhoi language, honoring South Africa's indigenous heritage. This profound spiritual concept of transformation, new responsibility, and connection between worlds perfectly captures our community's mission.
-            </p>
-            <p style="max-width: 800px; margin: 0 auto 2rem;">
-                Just as !Nau represents spiritual rebirth and accepting new responsibilities in Khoikhoi tradition, our !NAU community represents rebirth from dependence to independence, from isolation to authentic Ubuntu connection, from crisis vulnerability to resilient self-sufficiency. We bridge the physical world of infrastructure independence with the ancestral wisdom of communal living and cultural preservation.
-            </p>
-            <p style="max-width: 800px; margin: 0 auto 2rem;">
-                This project emerges from recognition that middle-class South Africans deserve better than choosing between expensive luxury off-grid properties or continued dependence on centralised service provision. Through revolutionary dual-purpose technology and cooperative economics rooted in indigenous wisdom, we prove complete independence can be accessible and community-centered.
-            </p>
-            <div class="highlight-box">
-                <h3>Our Commitment</h3>
-                <p>We commit to transparency throughout development. Every setback, challenge, and course correction will be communicated honestly.</p>
-                <p>We commit to Ubuntu philosophy as foundation, not marketing language. Every decision will genuinely consider impact on both individual households and collective wellbeing.</p>
-                <p>We commit to universal accessibility throughout all systems and facilities, integrated from inception rather than retrofitted.</p>
-                <p style="margin-bottom: 0;">We commit to financial responsibility protecting both investor capital and resident investments through conservative projections and adequate funding before construction launch.</p>
-            </div>
-        </div>
-    </section>
+    <details>
+      <summary>Can I visit before deciding?</summary>
+      <div class="answer">
+        <p>Once founding community formation launches in 2026, monthly gatherings will take place where prospective members experience the community formation process, meet future neighbours, participate in design discussions, and assess whether !NAU aligns with their values. These are not property tours but authentic working sessions. You participate in real community formation activities rather than observing staged presentations.</p>
+      </div>
+    </details>
 
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>!NAU</h3>
-                    <p>Complete Independence Community</p>
-                    <p style="margin-top: 1rem;">
-                        <strong>Project Developer:</strong> Peter Jacops<br>
-                        <strong>Phone:</strong> 071 276 5502<br>
-                        <strong>Email:</strong> info@nauintentionalcommunity.co.za<br>
-                        <strong>Location:</strong> Cape Town Region, South Africa<br>
-                        <strong>Status:</strong> Planning Complete, Formation Launching 2026
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#why-nau">Why !NAU</a></li>
-                        <li><a href="#innovation">Our Innovation</a></li>
-                        <li><a href="#community">Community Life</a></li>
-                        <li><a href="#participate">How to Participate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Participate</h3>
-                    <ul class="footer-links">
-                        <li><a href="#founding-member">Join Founding Community</a></li>
-                        <li><a href="#partners">Partnership Opportunities</a></li>
-                        <li><a href="mailto:info@nauintentionalcommunity.co.za?subject=Investment%20Information%20Request">Investment Information</a></li>
-                        <li><a href="#documentation">Request Documentation</a></li>
-                        <li><a href="mailto:info@nauintentionalcommunity.co.za?subject=Newsletter%20Subscription">Subscribe to Updates</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#documentation">Master Plan</a></li>
-                        <li><a href="#documentation">Financial Framework</a></li>
-                        <li><a href="#documentation">Community Constitution</a></li>
-                        <li><a href="#documentation">Target Market Analysis</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 !NAU Complete Independence Community. All rights reserved.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Live Light. Root Deep. Thrive Together.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+    <details>
+      <summary>What if the project does not proceed or fails during development?</summary>
+      <div class="answer">
+        <p>All founding member deposits are held in trust with clear refund procedures if the project does not reach minimum thresholds for property acquisition. You risk time invested in community formation activities but not financial capital until critical milestones are demonstrated. Comprehensive insurance and completion guarantees protect investor capital once construction launches. All development involves risk. We cannot guarantee success. We can only demonstrate thorough planning, realistic financial projections, experienced management, and transparent communication about challenges as they arise.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What does the !NAU name mean?</summary>
+      <div class="answer">
+        <p>!Nau is a profound spiritual process in Khoikhoi culture representing spiritual rebirth and the acquiring of new responsibilities within society, bridging the physical and ancestral worlds. The exclamation mark is not stylistic — it represents the click consonant from the Khoikhoi language, honouring South Africa's indigenous First Nations heritage. Just as !Nau represents transformation and new responsibility in Khoikhoi tradition, our community represents rebirth from dependence to independence, from isolation to authentic Ubuntu connection.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ═══ Documentation ═══ -->
+<section id="documentation">
+  <div class="section-inner">
+    <h2>Our Documentation</h2>
+    <p>We believe transparency builds trust. All project planning documentation is available for review. Email us to request any of the following materials.</p>
+
+    <div class="doc-grid">
+      <div class="doc-card">
+        <div class="doc-icon">📋</div>
+        <h3>Complete Master Plan</h3>
+        <p>50-hectare spatial design, independence systems specifications, community facilities detail, artisan enterprise integration, universal accessibility features, Ubuntu governance structures, and 48-month implementation timeline.</p>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">💼</div>
+        <h3>Financial Framework</h3>
+        <p>Investment requirements totalling ZAR 62.38 million with detailed category breakdown. Revenue projections across multiple streams. Operating cost analysis. Break-even pathways. Risk assessment and investor return analysis.</p>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📜</div>
+        <h3>Community Constitution</h3>
+        <p>Ubuntu philosophical foundation establishing governing principles. Governance structures including consensus-based decision-making. Accessibility commitments. Complete independence standards. Resident rights and exit procedures.</p>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📊</div>
+        <h3>Target Market Analysis</h3>
+        <p>Identification of 305,000-household addressable market. Buyer demographic and psychographic profiles focusing on middle-class professionals. Geographic targeting. Marketing channel strategy.</p>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📅</div>
+        <h3>Implementation Timeline</h3>
+        <p>48-month development schedule from funding through full operations. Regulatory approval milestones. Construction phasing. Founding community formation activities. Revenue generation commencement targets.</p>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🎯</div>
+        <h3>Investment Strategy</h3>
+        <p>Detailed capital raise approach across development finance institutions, community impact investors, and technology innovation investors. Investor tier structures and participation benefits.</p>
+      </div>
+    </div>
+
+    <div class="email-block" style="margin-top:1.5rem;">
+      <strong>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2841464e476846495d41465c4d465c41474649444b4745455d46415c51064b47065249">[email&#160;protected]</a></strong>
+      Subject: Documentation Request — include which documents you would like: Master Plan | Financial Framework | Community Constitution | Target Market Analysis | Implementation Timeline | Investment Strategy
+    </div>
+  </div>
+</section>
+
+<!-- ═══ About ═══ -->
+<section id="about">
+  <div class="section-inner">
+    <h2>About !NAU</h2>
+    <p>!Nau is a profound spiritual process in Khoikhoi culture representing spiritual rebirth and acquiring new responsibilities within society, bridging the physical and ancestral worlds. The exclamation mark in !NAU is not stylistic — it represents the click consonant from the Khoikhoi language, honouring South Africa's indigenous heritage.</p>
+    <p>Just as !Nau represents spiritual rebirth and accepting new responsibilities in Khoikhoi tradition, our !NAU community represents rebirth from dependence to independence, from isolation to authentic Ubuntu connection, from crisis vulnerability to resilient self-sufficiency. We bridge the physical world of infrastructure independence with the ancestral wisdom of communal living and cultural preservation.</p>
+    <p>This project emerges from recognition that middle-class South Africans deserve better than choosing between expensive luxury off-grid properties or continued dependence on centralised service provision.</p>
+
+    <h3>Our Commitment</h3>
+    <ul class="commitment-list">
+      <li>Transparency throughout development. Every setback, challenge, and course correction will be communicated honestly.</li>
+      <li>Ubuntu philosophy as foundation, not marketing language. Every decision will genuinely consider impact on both individual households and collective wellbeing.</li>
+      <li>Universal accessibility throughout all systems and facilities, integrated from inception rather than retrofitted.</li>
+      <li>Financial responsibility protecting both investor capital and resident investments through conservative projections and adequate funding before construction launch.</li>
+    </ul>
+
+    <div class="email-block" style="margin-top:1.5rem;">
+      <strong>Stay Connected</strong>
+      Subscribe for updates on development progress, founding community formation activities, partnership announcements, and regulatory milestones.<br><br>
+      Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b8bfb7be91bfb0a4b8bfa5b4bfa5b8bebfb0bdb2bebcbca4bfb8a5a8ffb2beffabb0">[email&#160;protected]</a> — Subject: Newsletter Subscription<br>
+      <span style="font-size:0.8rem;opacity:0.7;">We respect your privacy and will never share your information.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-contact">
+      <h4>!NAU</h4>
+      <p>Complete Independence Community</p>
+      <p>Project Developer: Peter Jacops</p>
+      <p>Phone: <a href="tel:+27712765502">071 276 5502</a></p>
+      <p>Email: <a href="/cdn-cgi/l/email-protection#caa3a4aca58aa4abbfa3a4beafa4bea3a5a4aba6a9a5a7a7bfa4a3beb3e4a9a5e4b0ab"><span class="__cf_email__" data-cfemail="157c7b737a557b74607c7b61707b617c7a7b7479767a7878607b7c616c3b767a3b6f74">[email&#160;protected]</span></a></p>
+      <p>Location: Cape Town Region, South Africa</p>
+      <p>Status: Planning Complete, Formation Launching 2026</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#why-nau">Why !NAU</a></li>
+        <li><a href="#innovation">Energy & Water Independence</a></li>
+        <li><a href="#community">Community Life</a></li>
+        <li><a href="#participate">How to Participate</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Participate</h4>
+      <ul>
+        <li><a href="#founding-member">Join Founding Community</a></li>
+        <li><a href="#partners">Partnership Opportunities</a></li>
+        <li><a href="/cdn-cgi/l/email-pro

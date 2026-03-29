@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequently Asked Questions — !NAU Intentional Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --earth: #2C2416;
+    --sand: #C8A96E;
+    --clay: #8B5E3C;
+    --sage: #6B7C5C;
+    --cream: #F5F0E8;
+    --pale: #FAF7F2;
+    --stone: #9E9589;
+    --ink: #1A1510;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--pale);
+    color: var(--earth);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .site-header {
+    background-color: var(--earth);
+    padding: 1.2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--sand);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+  }
+
+  .logo span {
+    color: #fff;
+    font-style: italic;
+  }
+
+  .nav-pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+  }
+
+  /* Hero band */
+  .hero {
+    background-color: var(--earth);
+    padding: 5rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '!NAU';
+    position: absolute;
+    right: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(8rem, 18vw, 16rem);
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.06);
+    pointer-events: none;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.15;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sand);
+  }
+
+  .hero-sub {
+    color: var(--stone);
+    font-size: 0.95rem;
+    max-width: 520px;
+    line-height: 1.8;
+  }
+
+  /* Divider */
+  .rule {
+    height: 1px;
+    background: linear-gradient(to right, var(--sand), transparent);
+    margin: 0 4rem;
+    opacity: 0.4;
+  }
+
+  /* Index bar */
+  .index-bar {
+    background: var(--cream);
+    border-bottom: 1px solid rgba(44,36,22,0.1);
+    padding: 1.4rem 4rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .index-bar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    flex-shrink: 0;
+  }
+
+  .index-bar a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clay);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .index-bar a:hover { opacity: 1; }
+
+  /* Main layout */
+  .faq-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 4rem 6rem;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 0 5rem;
+    align-items: start;
+  }
+
+  /* Sticky sidebar */
+  .sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+
+  .sidebar-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .sidebar-heading {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .sidebar-link {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--earth);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.8rem;
+    transition: border-color 0.2s, color 0.2s;
+    line-height: 1.4;
+  }
+
+  .sidebar-link:hover {
+    border-left-color: var(--sand);
+    color: var(--clay);
+  }
+
+  .sidebar-link.active {
+    border-left-color: var(--sand);
+    color: var(--clay);
+  }
+
+  /* FAQ sections */
+  .faq-main {}
+
+  .faq-section {
+    margin-bottom: 5rem;
+  }
+
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sand);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--earth);
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(44,36,22,0.12);
+  }
+
+  /* FAQ item */
+  .faq-item {
+    border-bottom: 1px solid rgba(44,36,22,0.08);
+    padding: 0;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .faq-q-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--earth);
+    line-height: 1.4;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--sand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
+    transition: background 0.25s, transform 0.25s;
+    position: relative;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--clay);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  .faq-icon::before {
+    width: 9px;
+    height: 1px;
+  }
+
+  .faq-icon::after {
+    width: 1px;
+    height: 9px;
+  }
+
+  .faq-item.open .faq-icon {
+    background: var(--sand);
+    transform: rotate(45deg);
+  }
+
+  .faq-item.open .faq-icon::before,
+  .faq-item.open .faq-icon::after {
+    background: var(--earth);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 600px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 0 1.8rem 0;
+    font-size: 0.92rem;
+    color: #4A4030;
+    line-height: 1.85;
+    max-width: 680px;
+  }
+
+  .faq-answer-inner p + p {
+    margin-top: 1rem;
+  }
+
+  .faq-answer-inner strong {
+    font-weight: 500;
+    color: var(--earth);
+  }
+
+  .faq-answer-inner a {
+    color: var(--clay);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    border-left: 3px solid var(--sand);
+    padding: 1.2rem 1.5rem;
+    margin: 2rem 0;
+    background: rgba(200,169,110,0.06);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--clay);
+    line-height: 1.5;
+  }
+
+  /* Footer band */
+  .faq-footer {
+    background: var(--earth);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .faq-footer-text {
+    font-size: 0.85rem;
+    color: var(--stone);
+    max-width: 440px;
+    line-height: 1.7;
+  }
+
+  .faq-footer-text a {
+    color: var(--sand);
+    text-decoration: none;
+  }
+
+  .footer-mono {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    opacity: 0.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 820px) {
+    .site-header, .hero, .index-bar { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .faq-body { grid-template-columns: 1fr; padding: 2rem 1.5rem 4rem; }
+    .sidebar { display: none; }
+    .faq-footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    .rule { margin: 0 1.5rem; }
+    .index-bar { padding-left: 1.5rem; gap: 1rem; }
+  }
+
+  /* Scroll reveal */
+  .faq-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .faq-section.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://nauintentionalcommunity.co.za" class="logo">!<span>NAU</span> Village</a>
+  <span class="nav-pill">Frequently Asked Questions</span>
+</header>
+
+<section class="hero">
+  <span class="hero-label">Investor Information</span>
+  <h1>Questions we expect<br><em>serious investors</em><br>to ask.</h1>
+  <p class="hero-sub">Intentional communities have a documented failure rate. We have studied why, and designed !NAU around the lessons. This page addresses the hard questions directly.</p>
+</section>
+
+<div class="rule"></div>
+
+<nav class="index-bar">
+  <span class="index-bar-label">Jump to</span>
+  <a href="#concept">The Concept</a>
+  <a href="#viability">Investment Viability</a>
+  <a href="#governance">Governance</a>
+  <a href="#financials">Financials</a>
+  <a href="#energy">Energy &amp; Infrastructure</a>
+  <a href="#community">Community Model</a>
+</nav>
+
+<div class="faq-body">
+
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <span class="sidebar-heading">The Concept</span>
+      <a href="#q-what-is" class="sidebar-link">What is !NAU?</a>
+      <a href="#q-intentional" class="sidebar-link">Why intentional community?</a>
+      <a href="#q-name" class="sidebar-link">What does !NAU mean?</a>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Investment Viability</span>
+      <a href="#q-failure" class="sidebar-link">The 90% failure rate</a>
+      <a href="#q-different" class="sidebar-link">How is !NAU different?</a>
+      <a href="#q-returns" class="sidebar-link">What are the returns?</a>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Governance</span>
+      <a href="#q-governance" class="sidebar-link">How is it governed?</a>
+      <a href="#q-founder" class="sidebar-link">Founder dependency risk</a>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Financials</span>
+      <a href="#q-investment" class="sidebar-link">Total investment</a>
+      <a href="#q-equity" class="sidebar-link">Equity accrual</a>
+      <a href="#q-exit" class="sidebar-link">Exit provisions</a>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Energy &amp; Infrastructure</span>
+      <a href="#q-energy" class="sidebar-link">Energy model</a>
+      <a href="#q-water" class="sidebar-link">Water and waste</a>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Community Model</span>
+      <a href="#q-residents" class="sidebar-link">Who are the residents?</a>
+      <a href="#q-ubuntu" class="sidebar-link">Ubuntu and philosophy</a>
+      <a href="#q-artisan" class="sidebar-link">The artisan village</a>
+    </div>
+  </aside>
+
+  <main class="faq-main">
+
+    <section class="faq-section" id="concept">
+      <span class="section-tag">01</span>
+      <h2 class="section-title">The Concept</h2>
+
+      <div class="faq-item" id="q-what-is">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What exactly is the !NAU Village?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>!NAU Village is a planned intentional community development located near Klein Dassenberg, north of Cape Town. It comprises 32 rent-to-own residential units, an artisan production village, shared community infrastructure, and a 512 kW agrivoltaic energy field — a dual-use system that generates solar electricity while enabling agricultural production on the same land.</p>
+            <p>The development is structured as a financially viable investment that also produces measurable social and environmental outcomes. It is not a charity project. It is designed to generate returns for investors while simultaneously enabling residents without access to conventional mortgage finance to build genuine, contractually guaranteed equity in their homes over ten years.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-intentional">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">Why structure this as an intentional community rather than a conventional residential development?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>A conventional development sells units at market price to buyers who can access mortgage finance. That model excludes the majority of South Africans who are employed, creditworthy in practice, but locked out of the formal banking system. !NAU is designed for that market.</p>
+            <p>The intentional community structure — shared values, shared infrastructure, shared economic activity through the artisan village — is not ideological decoration. It is the mechanism that makes the financial model work. Shared energy infrastructure reduces individual operating costs. The artisan village creates on-site income. The Ubuntu-grounded governance model reduces the conflict and attrition that cause communities to collapse.</p>
+            <p>South Africa's land use remains deeply inequitable, shaped by colonial and apartheid spatial planning. !NAU is a commercially structured response to that inequity — not a protest against it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-name">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What does the name !NAU mean, and why the exclamation mark?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>The exclamation mark is a click consonant from the Khoikhoi language — one of the indigenous languages of the Western Cape. It is not punctuation. It is phonetic, and it is intentional. The name grounds the project in the land it occupies and the people who have lived on it longest.</p>
+            <p>The choice reflects a foundational principle of the project: that sustainable community development in South Africa cannot be culturally neutral. !NAU is explicitly rooted in Ubuntu philosophy — the ethic of shared humanity — and in Khoikhoi relationship to land, which is one of stewardship rather than ownership in the extractive sense.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="viability">
+      <span class="section-tag">02</span>
+      <h2 class="section-title">Investment Viability</h2>
+
+      <div class="faq-item" id="q-failure">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">Research suggests roughly 90% of intentional communities fail. Why should an investor consider this one?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>That figure is accurate, and we do not dispute it. Intentional communities fail for well-documented reasons: charismatic founder dependency, no viable income model, poor financial governance, ideological cohesion that cannot survive practical stress, and isolation from the broader economy.</p>
+            <div class="pull-quote">!NAU has been designed by examining those failure modes and building structural responses to each of them — not by ignoring them.</div>
+            <p>The income model is not dependent on goodwill. The agrivoltaic field and artisan village generate independent revenue. The rent-to-own structure creates contractual obligations, not voluntary contributions. Governance is distributed and documented, not concentrated in a founding personality. The community is physically and economically connected to Cape Town, not isolated from it.</p>
+            <p>The 10% of intentional communities that succeed share two characteristics: a unifying purpose strong enough to sustain the community through difficulty, and financial discipline that keeps the vision from consuming the budget. !NAU is designed around both.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-different">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What structurally separates !NAU from failed intentional communities?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Four structural differences are material to investors.</p>
+            <p><strong>Contractual equity accrual.</strong> Residents are not donors or idealists. They are participants in a legally binding rent-to-own structure that delivers 100% home equity at year ten. Financial commitment is embedded in contract, not culture.</p>
+            <p><strong>Diversified revenue.</strong> The project does not depend on a single income stream. Residential rental income, agrivoltaic energy production, and artisan village commercial activity each contribute independently.</p>
+            <p><strong>External economic integration.</strong> The artisan village is designed to trade with the broader Cape Town economy, not to sustain a closed internal economy. Residents are expected to hold external employment or operate market-facing businesses.</p>
+            <p><strong>Governance documentation.</strong> Decision-making structures, financial controls, and conflict resolution processes are documented in advance, not improvised as community tensions arise.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-returns">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What financial returns does !NAU offer investors?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Detailed financial projections are available in the !NAU investor documentation. The total project investment is R62.38 million. Returns are generated through a combination of residential rental income, agrivoltaic energy revenue (including potential Power Purchase Agreement structures), and artisan village commercial lease income.</p>
+            <p>The project is positioned in the impact investment category — it offers market-adjacent returns alongside quantifiable social and environmental outcomes. Investors seeking purely maximum short-term yield should request the detailed financial model for direct comparison with alternatives.</p>
+            <p>For the full investor summary and financial projections, contact the !NAU development team directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="governance">
+      <span class="section-tag">03</span>
+      <h2 class="section-title">Governance</h2>
+
+      <div class="faq-item" id="q-governance">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">How is !NAU governed, and who makes decisions?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>!NAU operates under a layered governance model. Strategic and financial decisions affecting investor interests are governed by the development entity. Community operational decisions — shared space management, community standards, internal dispute resolution — are governed by a resident council operating within a documented charter.</p>
+            <p>The two layers are deliberately separated. Investor protections are not subject to resident council votes. Community autonomy operates within clearly bounded parameters. This separation is the single most important structural lesson from failed intentional communities, where financial governance was collapsed into community process and neither survived intact.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-founder">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What happens to !NAU if the founding team is no longer involved?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>This is the right question to ask, and it is one we have planned for explicitly. Founder dependency is the most frequently cited cause of intentional community failure — when the charismatic individual who created the vision departs, the community often loses its cohesion and its operating knowledge simultaneously.</p>
+            <p>!NAU's governance documentation, financial structures, and community charter are designed to be operable without reference to any founding individual. The rent-to-own contracts, energy infrastructure agreements, and artisan village leases are legal instruments that function independently of personnel. The resident council provides continuity of community governance. Succession provisions for key operational roles are documented.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="financials">
+      <span class="section-tag">04</span>
+      <h2 class="section-title">Financials</h2>
+
+      <div class="faq-item" id="q-investment">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What is the total investment, and how is capital deployed?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>The total project investment is R62.38 million. Capital is deployed across four primary areas: residential unit construction (32 rent-to-own homes), shared community infrastructure, the 512 kW agrivoltaic energy field, and the artisan production village. A detailed capital allocation breakdown is available in the investor summary document.</p>
+            <p>The agrivoltaic field is the capital-intensive infrastructure component that also generates the most predictable long-term revenue, and it anchors the project's energy independence and income diversification strategy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-equity">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">How does the resident equity accrual model work?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Each resident enters a rent-to-own agreement under which a defined portion of their monthly payment is allocated to equity accrual in their unit. The accrual schedule is structured so that residents reach exactly 100% equity ownership at the end of year ten.</p>
+            <p>The model is contractually binding and transparent. Residents know at signing exactly what their equity position will be at each point in the agreement. There is no discretionary component. This predictability is central to the community's stability — residents are not dependent on the goodwill of a landlord or the health of a collective fund. Their equity trajectory is fixed in their contract.</p>
+            <p>From an investor perspective, the structure provides rental income certainty for ten years, with units transitioning to full resident ownership on a known schedule that can be modelled into long-term cash flow projections.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-exit">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What exit provisions are available to investors?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Exit provisions are detailed in the investor agreement and vary by investment tranche and entry timing. The primary exit pathway for residential investment aligns with the ten-year equity accrual cycle, at which point units transfer to resident ownership. The agrivoltaic and artisan village infrastructure components have separate liquidity provisions.</p>
+            <p>We recommend that prospective investors review the full investor documentation and engage legal and financial advisors independently before committing capital. The !NAU team is available to walk through the financial model in detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="energy">
+      <span class="section-tag">05</span>
+      <h2 class="section-title">Energy and Infrastructure</h2>
+
+      <div class="faq-item" id="q-energy">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What is the energy model, and how does it reduce risk?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>The 512 kW agrivoltaic field is designed to meet the community's total electricity demand, with surplus capacity available for export under a Power Purchase Agreement. The system eliminates grid dependency for residents, which in the South African context — where load shedding has materially affected property values and quality of life — is a significant and measurable asset.</p>
+            <p>Energy benchmarking for the project has drawn on comparable off-grid community developments including Orania, which operates its own municipal electricity infrastructure. The !NAU model targets similar per-unit energy sufficiency at a community scale.</p>
+            <p>Battery storage and the potential integration of hydrogen storage technology are part of the long-term infrastructure roadmap, providing resilience against periods of low solar generation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-water">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">How does !NAU handle water supply and wastewater?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Water supply and wastewater treatment are being developed in consultation with specialist providers, including engagement with Maskam Water regarding appropriate treatment systems for the site. The Klein Dassenberg location requires solutions that reduce dependency on municipal reticulation infrastructure, which is consistent with the project's broader off-grid resilience strategy.</p>
+            <p>Full infrastructure specifications are included in the site planning documentation currently being progressed with the City of Cape Town planning department.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="community">
+      <span class="section-tag">06</span>
+      <h2 class="section-title">Community Model</h2>
+
+      <div class="faq-item" id="q-residents">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">Who are the intended residents of !NAU Village?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>!NAU is designed for individuals and families who are economically active and capable of sustaining a monthly financial commitment, but who are excluded from conventional mortgage finance. This is a large and underserved market in South Africa — not a marginal one.</p>
+            <p>Residents are expected to hold external employment or operate market-facing businesses, including through the artisan village. The community is not designed as a retreat from the economy. It is designed as a more equitable point of entry into it.</p>
+            <p>Resident selection will prioritise alignment with community values and financial sustainability in equal measure. Neither alone is sufficient.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-ubuntu">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What role does Ubuntu philosophy play in the project, practically speaking?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>Ubuntu — the Southern African ethic of shared humanity, often rendered as "I am because we are" — is not marketing language for !NAU. It is the operational philosophy that shapes how shared spaces are maintained, how disputes are resolved, how community decisions are made, and how individual residents relate to communal resources.</p>
+            <p>In practical terms, it means that the community charter prioritises collective wellbeing without erasing individual rights. It means that conflict resolution processes are restorative rather than punitive. It means that economic activity within the artisan village is designed to strengthen community bonds rather than create internal inequality.</p>
+            <p>The most successful long-running intentional communities — Findhorn, Auroville, the regenerated Farm Collective — share a clearly articulated and genuinely held philosophical foundation. Ubuntu provides that foundation for !NAU in a way that is authentically rooted in the South African context.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q-artisan">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What is the artisan village, and how does it contribute economically?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            <p>The artisan village is a designated commercial production area within the !NAU development, designed to house small-scale manufacturing, craft production, food processing, and creative industry businesses operated by residents and external tenants.</p>
+            <p>It serves two functions simultaneously. For residents, it provides an accessible on-site economic platform — reduced-cost workspace that lowers the barrier to self-employment and market entry. For the project, it provides commercial rental income that diversifies revenue beyond residential payments and energy production.</p>
+            <p>The artisan village is designed to trade externally — with Cape Town markets, retail buyers, and online customers — rather than to sustain internal consumption only. Economic isolation is one of the documented failure modes of intentional communities. The artisan village is specifically structured to prevent it.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<footer class="faq-footer">
+  <p class="faq-footer-text">For investor documentation, financial projections, or site planning information, contact the !NAU development team at <a href="https://nauintentionalcommunity.co.za">nauintentionalcommunity.co.za</a>.</p>
+  <span class="footer-mono">!NAU Intentional Community — Klein Dassenberg, Cape Town</span>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.faq-section').forEach(s => observer.observe(s));
+
+  // Active sidebar link
+  const sections = document.querySelectorAll('.faq-section');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+  const secObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        const id = e.target.id;
+        const active = document.querySelector(`.sidebar-link[href="#${id}"]`);
+        // highlight any link pointing into this section
+        sidebarLinks.forEach(l => {
+          const href = l.getAttribute('href').replace('#q-','');
+          if (e.target.querySelector('#q-' + href) || l.getAttribute('href') === '#' + id) {
+            l.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => secObserver.observe(s));
+</script>
+</body>
+</html>
